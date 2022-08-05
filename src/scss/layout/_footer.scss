@@ -1,0 +1,336 @@
+@charset 'UTF-8';
+
+
+.sp {
+  display: none;
+
+  @include SP {
+    display: block;
+  }
+}
+
+.footer {
+  position: relative;
+  left: auto;
+  padding: 50px 80px;
+  background: url(../img/municipality/bg-footer.png);
+  background-color: #F2F0E7;
+  @include add_prefix(box-shadow, 0px 0px 5px 1px rgba(0, 0, 0, 0.1));
+
+  @include SP {
+    padding: 30px 0;
+  }
+
+  .inFooter {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+    position: relative;
+
+    @include SP {
+      display: block;
+      margin: 20px auto
+    }
+
+    &__left {
+      width: 460px;
+      margin-left: 80px;
+
+      @include SP {
+        margin-left: 20px;
+      }
+
+      .fcontent {
+        display: flex;
+        justify-content: space-between;
+
+        &__logo-footer {
+          width: 158.68px;
+          height: 96.87px;
+          background: url(../img/municipality/logo-footer.svg) center/ 158.68px 96.87px no-repeat;
+
+          @include SP {
+            position: absolute;
+            background: url(../img/municipality/logo-footer.svg) center/ 120px 73px no-repeat;
+            width: 120px;
+            height: 73px;
+          }
+        }
+
+        >ul {
+          list-style: none;
+          padding-left: 15px;
+
+          @include SP {
+            padding-left: 0;
+          }
+
+          .ftxt {
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            line-height: 42px;
+
+            @include SP {
+              line-height: 20px;
+              margin: 20px 0 0 135px;
+            }
+
+            >span {
+              font-size: 12px;
+              padding-left: 10px;
+            }
+          }
+
+          li {
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            line-height: 20px;
+
+            @include SP {
+              font-size: 14px;
+              line-height: 25px;
+
+              &:nth-child(2) {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .scontent {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        @include SP {
+          display: none;
+        }
+
+        .btn {
+          position: relative;
+          background: #000;
+          border: 1px solid #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 222px;
+          height: 46px;
+          cursor: pointer;
+
+          &:before {
+            content: "";
+            position: absolute;
+            transition: all 0.3s;
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            top: 0;
+            left: 0
+          }
+
+          &:hover {
+            &:before {
+              width: 100%;
+            }
+          }
+
+          .b-txt {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 64px;
+            color: #fff;
+            text-decoration: none;
+            mix-blend-mode: difference;
+            opacity: 1;
+
+            &:after {
+              content: "";
+              position: absolute;
+              border-top: 1px solid #fff;
+              width: 15px;
+              top: calc(50% - 1px);
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      width: calc(100% - 500px);
+      max-width: 450px;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 120px;
+
+      @include SP {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin-top: 40px;
+      }
+
+      .menu-footer {
+        width: 100%;
+        list-style: none;
+        padding-left: 0;
+        margin-right: 30px;
+
+        @include SP {
+          font-size: 0;
+          margin: 0;
+
+          &:nth-of-type(1) {
+            li {
+              &:nth-child(2n) {
+                border-right: 1px solid #c3baba;
+              }
+            }
+          }
+
+          &:nth-of-type(2) {
+            li {
+              &:nth-child(2n+1) {
+                border-right: 1px solid #c3baba;
+              }
+            }
+          }
+        }
+
+        li {
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          line-height: 34px;
+          border-bottom: 1px solid #C3BABA;
+          padding-left: 25px;
+          position: relative;
+          cursor: pointer;
+
+          @include SP {
+            &.home-sp {
+              display: flex;
+              width: 100%;
+              justify-content: center;
+              border-top: 1px solid #C3BABA;
+              font-size: 18px;
+
+              &:before {
+                display: none;
+              }
+            }
+
+            width: 50%;
+            display: inline-block;
+            padding-left:45px;
+            height: 66px;
+            font-size:15px;
+            line-height: calc(20/15);
+            vertical-align: top;
+
+          }
+
+          span {
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:before {
+              content: "";
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              border: 1px solid #000;
+              border-radius: 50%;
+              background: url(../img/municipality/arr.svg) center left 6px/4px 7px no-repeat;
+              left: -25px;
+              top: calc(100% - 25px);
+              @include add_prefix(transition, 0.3s ease all);
+              transition: 0.3s;
+
+              @include SP {
+                top: calc(100% - 39px);
+                left: -28px;
+              }
+            }
+
+            &:hover {
+              &:before {
+                background: #E59601 url(../img/municipality/arr.svg) center left 6px/4px 7px no-repeat;
+                border: 1px solid #E59601;
+
+                @include SP {
+                  background: url(../img/municipality/arr.svg) center left 6px/4px 7px no-repeat;
+                  border: 1px solid #000;
+                }
+              }
+            }
+          }
+
+
+        }
+      }
+    }
+
+    &__social {
+      width: 100%;
+      max-width: 95px;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      right: 0;
+      bottom: -20px;
+
+      @include SP {
+        margin: 0 auto;
+        position: relative;
+        max-width: 110px;
+        ;
+      }
+
+      .fb {
+        content: "";
+        background: url(../img/municipality/ico_fb.svg);
+        width: 43px;
+        height: 43px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: url(../img/municipality/fb_ico-ac.svg);
+
+          @include SP {
+            background: url(../img/municipality/ico_fb.svg);
+          }
+        }
+      }
+
+      .instg {
+        content: "";
+        background: url(../img/municipality/ico_instg.svg);
+        height: 43px;
+        width: 43px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: url(../img/municipality/ico_instg-ac.svg);
+
+          @include SP {
+            background: url(../img/municipality/ico_instg.svg);
+          }
+        }
+
+      }
+    }
+  }
+
+}

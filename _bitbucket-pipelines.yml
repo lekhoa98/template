@@ -1,0 +1,17 @@
+image: php:7.4
+
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update
+          - apt-get -qq install git-ftp
+
+          # Upload all files
+          # - git ftp init -f --syncroot dist/ --user $FTP_ALIVEWEBSITE --passwd $FTP_PASS_ALIVEWEBSITE ftp://103.70.29.55/name-project/
+
+          # Or upload only push files
+          # - git ftp push -f --syncroot dist/ --user $FTP_ALIVEWEBSITE --passwd $FTP_PASS_ALIVEWEBSITE ftp://103.70.29.55/name-project/
+
+          # Or if the files are already there
+          # - git ftp catchup -f --syncroot dist/ --user $FTP_ALIVEWEBSITE --passwd $FTP_PASS_ALIVEWEBSITE ftp://103.70.29.55/name-project/

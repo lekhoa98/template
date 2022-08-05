@@ -1,0 +1,297 @@
+@charset 'UTF-8';
+@import '../utility/*';
+
+.pc {
+    display: none;
+
+    @include PC {
+        display: block;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 104px;
+    height: 3000px;
+}
+
+.bg {
+    background: url(../../img/municipality/bg-main.jpg);
+    background-size: cover;
+
+    .title {
+        display: flex;
+        font-size: 38px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        width: 100%;
+        height: 216px;
+        margin: 0 auto;
+        background-color: #E59601;
+        opacity: 0.9;
+
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.breadcrumb {
+    width: 100%;
+    margin: 20px auto;
+    max-width: 1024px;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        color: #A0A0A0;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+
+        li {
+            a {
+                position: relative;
+                color: #A0A0A0;
+                padding-right: 30px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border-top: 1px solid #A0A0A0;
+                    border-right: 1px solid #A0A0A0;
+                    transform: rotate(45deg);
+                    width: 4px;
+                    height: 4px;
+                    top: 7.5px;
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.section {
+    display: flex;
+    width: 100%;
+    margin-top: 35px;
+    justify-content: space-between;
+
+    .scroll-bar {
+        width: 100%;
+        max-width: 18%;
+        position: relative;
+
+        .list {
+            position: absolute;
+            z-index: 1;
+            margin: 0 auto;
+            width: 100%;
+
+            ul {
+                align-items: center;
+                list-style: none;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                a {
+                    text-decoration: none;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 1;
+
+                    &.btn {
+                        width: 100%;
+                        max-width: 190px;
+                        margin-bottom: 15px;
+                        background-color: #000;
+                        position: relative;
+                        border: 1px solid #000;
+
+                        .btn-text {
+                            position: relative;
+                            color: #fff;
+                            font-size: 16px;
+                            letter-spacing: 0.1em;
+                            font-weight: 700;
+                            padding: 10px 0 10px 15px;
+                            mix-blend-mode: difference;
+                            text-align: left;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                border-bottom: 1px solid #fff;
+                                width: 20px;
+                                right: 0;
+                                top: 50%
+                            }
+                        }
+
+                        &:before {
+                            content: "";
+                            width: 0%;
+                            background-color: #fff;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            transition: 0.3s all;
+                        }
+
+                        &:hover {
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+        max-width: 82%;
+        position: relative;
+
+        .item {
+            &:not(:last-child){
+                margin-bottom:50px;
+            }
+            &__ttl {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                background-color: #E59601;
+                font-weight: 700;
+                font-size: 32px;
+                letter-spacing: 0.1em;
+                padding-left: 60px;
+                margin: 0 auto;
+            }
+
+            &__inside {
+                width: 100%;
+                max-width: 967px;
+                position: relative;
+                margin: 0 auto;
+
+                .part {
+                    display: flex;
+                    margin-top: 55px;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    &__doc {
+                        width: 56.5%;
+
+                        &__ttl {
+                            color: #000;
+                            font-size: 24px;
+                            font-weight: bold;
+                            letter-spacing: 0.1em;
+                            line-height: 40px;
+                            margin-bottom: 20px;
+                        }
+
+                        &__txt {
+                            color: #000;
+                            font-size: 16px;
+                            font-weight: 400;
+                            letter-spacing: 0.1em;
+                            line-height: 30px;
+                        }
+                    }
+
+                    &__img {
+                        width: 39.5%;
+                        padding-top: 2px;
+                    }
+                }
+                .blockGray{
+                    margin-top:60px;
+                    width: 100%;
+                    padding: 25px;
+                    background: #F2F0E7 url(../../img/municipality/bg-footer.png);
+                    .heading{
+                        width: 100%;
+                        font-size: 20px;
+                        color: #000;
+                        letter-spacing: 0.1em;
+                        font-weight: bold;
+                        line-height: 44px;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    &__img{
+                        margin:30px auto;
+                        width: 100%;
+                        max-width: 868px;
+                    }
+                    .list{
+                        list-style: none;
+                        width: 100%;
+                        max-width: 868px;
+                        margin:0 auto;
+                        padding-left: 20px;
+                        li{
+                            display: flex;
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            color: #000;
+                            letter-spacing: 0.1rem;
+                            margin: 15px 0;
+                            .txt1{
+                                position: relative;
+                                width: 170px;
+                                padding-left: 14pxl;
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    border: 1px solid #E59601;
+                                    border-radius: 50%;
+                                    width: 3px;
+                                    height: 3px;
+                                    background: #E59601;
+                                    top: 12px;
+                                    left: -21px;
+                                }
+                                &:after{
+                                    content: ":";
+                                    position: absolute;
+                                    right: 22px;
+                                }
+
+                            }
+                        }
+                    }
+                }
+                >.txt{
+                    font-size:16px;
+                    line-height: calc(34/16);
+                    letter-spacing: 0.1em;
+                    margin-top:50px
+                }
+                .blockOrg{
+                    width: 100%;
+                    display: flex;
+                    margin-top:50px;
+                }
+            }
+        }
+    }
+}
+
+#scroll {
+    height: 290px;
+}

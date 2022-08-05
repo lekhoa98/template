@@ -1,0 +1,393 @@
+@charset 'UTF-8';
+
+*{
+  box-sizing: border-box;
+}
+.calling {
+  a {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .tel {
+    @include lato;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    color: #000;
+    line-height: 27px;
+    padding-left: 30px;
+    transition: 0.3s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 59%;
+      width: 14.64px;
+      height: 14.75px;
+      margin-top: -10px;
+      background: url(../img/municipality/phone.svg) center/14.64px 14.75px no-repeat;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: #E59601;
+
+      &:before {
+        background: url(../img/municipality/phone-active.svg) center/14.64px 14.75px no-repeat;
+      }
+    }
+  }
+
+  .time {
+    font-size: 10px;
+    line-height: 14px;
+    pointer-events: none;
+  }
+  @include max-screen(767px) {
+    .time {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (max-device-width: 768px) {
+  .calling {
+    a {
+      pointer-events: auto;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: auto;
+  top: auto;
+  z-index: 1000;
+  padding: 6px 15px;
+  background: #fff;
+  @include add_prefix(box-shadow, 0px 0px 5px 1px rgba(0, 0, 0, 0.1));
+
+  .inHeader {
+    display: flex;
+    max-width: $widthcm;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2000;justify-content: space-between;
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 10px;
+    @include add_prefix(transition, 0.3s ease all);
+    @include SP{
+      top:0;
+    }
+
+    img {
+      display: block;
+      width: 110.32px;
+      height: 66.65px;
+      @include add_prefix(transition, 0.3s ease all);
+      @include SP{
+        width: 80.01px;
+        height: 46.31px;
+      }
+    }
+  }
+
+  @include SP {
+    padding: 8.5px 15px;
+  }
+}
+
+.fixHeader {
+  padding-top: 130px;
+
+  @include max-screen(767px) {
+    padding-top: 50px;
+  }
+
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 15px 15px;
+
+    .logo {
+      top: 72px;
+
+      img {
+        width: 108px;
+        height: 26px;
+      }
+    }
+
+    .hNavi {
+      margin-top: -70px;
+      margin-bottom: 25px;
+      @include SP{
+        display: none;
+      }
+    }
+  }
+}
+
+.layerMenu {
+  text-align: right;
+  position: relative;
+  width: calc(100% - 110px);
+  margin: auto 0;
+  .inLayer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .hNavi {
+    margin-left: 30px;
+
+    ul {
+      max-width: $widthcm;
+      margin: 0 auto;
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+      }
+    }
+
+    @include max-screen(767px) {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .gNavi {
+    width: 640px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    >li {
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+      margin-left: 3%;
+      font-weight: bold;
+      letter-spacing: 1px;
+      position: relative;
+
+      >a {
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        font-weight: bold;
+        position: relative;
+        opacity: 1;
+
+        &:before {
+          content: "";
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          border: 1px solid #000;
+          border-radius: 50%;
+          background: url(../img/municipality/arr.svg) center left 6px/4px 7px no-repeat;
+          left: -25px;
+          top: 2px;
+          @include add_prefix(transition, 0.3s ease all);
+          transition: 0.3s;
+        }
+
+        &:hover {
+          &:before {
+            background: #E59601 url(../img/municipality/arr.svg) center left 6px/4px 7px no-repeat;
+            border: 1px solid #E59601;
+          }
+        }
+
+      }
+    }
+  }
+
+
+  @include max-screen(767px) {
+    position: fixed;
+    right: -100%;
+    top: 50px;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background: #e8e8e8;
+
+    .inLayer {
+      position: relative;
+      height: 90%;
+      padding: 0 30px 30px;
+      overflow: auto;
+    }
+
+    .gNavi {
+      margin-bottom: 30px;
+
+      >ul {
+
+        >li {
+          display: block;
+          width: 100%;
+          font-weight: bold;
+          border-bottom: 1px solid #fff;
+          margin: 0;
+
+          >a {
+            color: #7b7b7b;
+            padding: 17px 0 15px 0;
+
+            &:before {
+              display: block;
+              right: 10px;
+              margin-top: -4px;
+              transform: rotate(135deg);
+            }
+
+            &:hover {
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          &.hasSub {
+            >a {
+              &:before {
+                transform: rotate(-135deg);
+              }
+            }
+
+            .plus {
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 30%;
+              height: 100%;
+              cursor: pointer;
+            }
+          }
+
+          &.active {
+            >a {
+              &:before {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+      }
+
+      .navSub {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        padding: 0;
+        transform: none;
+      }
+    }
+
+  }
+
+  @include min-screen(768px) {
+    position: relative !important;
+    right: auto;
+    top: auto;
+  }
+}
+.contact {
+  margin-left: 40px;
+  content: "";
+  position: relative;
+  width: 104px;
+  height: 92px;
+  background: url(../img/municipality/contact_header.svg) center/92px 92px no-repeat;
+  transition: 0.3s;
+  cursor: pointer;
+  top:15px;
+  &:hover {
+    background: url(../img/municipality/contact_header-active.svg) center/92px 92px no-repeat;
+  }
+  @include SP{
+  margin:0;
+  width: 53px;
+  height: 53px;
+  background: url(../img/municipality/contact-sp.svg) center/53px 53px no-repeat;
+  top:auto;
+  right:60px;
+  }
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 1000;
+  height: 22px;
+  width: 40px;
+  top: 24px;
+  right:12px;
+  display: none;
+
+  span {
+    position: absolute;
+    transition: 300ms;
+    background: #000;
+    &:nth-child(1){
+      height: 1%;
+        width: 100%;
+        top: 0;
+    }
+    &:nth-child(2){
+      height: 1%;
+        height: 1%;
+        width: 100%;
+        top: 50%;
+    }
+    &:nth-child(3){
+      height: 1%;
+        height: 1%;
+        width: 100%;
+        bottom: 0;
+    }
+  }
+
+/*   &.active {
+    span {
+      width: 28px;
+    }
+
+    .ham {
+      transform: rotate(45deg) translateY(7px) translateX(7px);
+    }
+
+    .ber {
+      transform: rotate(-45deg);
+    }
+
+    .ger {
+      display: none;
+    }
+  } */
+
+  @include max-screen(767px) {
+    display: block;
+  }
+}

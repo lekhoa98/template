@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+.c-fw {
+  width: 100%;
+}
+
+[rel~="js-lazy"] {
+  opacity: 0;
+  &:not(.initial) {
+    transition: opacity 0.1s;
+  }
+  &.initial,
+  &.loaded,
+  &.error {
+    opacity: 1;
+  }
+}
+
+.c-lazybg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &--top {
+    background-position: center top;
+  }
+}

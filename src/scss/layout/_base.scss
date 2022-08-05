@@ -1,0 +1,357 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------
+clearfix
+------------------------------------------------------------*/
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  line-height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+/* exlude MacIE5 \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* end MacIE5 */
+/*-----------------------------------------------------------
+reset
+------------------------------------------------------------*/
+p {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+input,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  resize: none;
+}
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="url"] {
+  word-break: normal;
+  white-space: nowrap;
+  @include add_prefix(appearance, none);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 100%;
+}
+dl,
+dt,
+dd,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*font-size: 100%;*/
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+dialog {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+table img {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  border: 0;
+}
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+*,
+*:before,
+*:after {
+  @include add_prefix(box-sizing, border-box);
+  @if $font_smooth {
+    @include font-smooth();
+  }
+}
+*:focus {
+  outline: none !important;
+}
+label,
+select,
+button {
+  cursor: pointer;
+}
+
+// Remove select appearance for IE
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  select::-ms-expand {
+    display: none;
+  }
+}
+@media screen\0 {
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+/*-----------------------------------------------------------
+Link
+------------------------------------------------------------*/
+a {
+  outline: none;
+  transition: opacity 0.3s;
+  @include HOVER {
+    &:hover {
+      text-decoration: none;
+      color: $color_link;
+      opacity: 0.5;
+    }
+  }
+}
+a:link,
+a:visited,
+a:active {
+  color: $color_link;
+  text-decoration: none;
+}
+/*-----------------------------------------------------------
+FONT family
+------------------------------------------------------------*/
+.ffN {
+  @include ffN;
+}
+.ffM {
+  @include lato;
+}
+.ffYG {
+  @include ffYG;
+}
+.ffYM {
+  @include ffYM;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+/*-----------------------------------------------------------
+PAGE BOOT
+------------------------------------------------------------*/
+/* WordPress */
+.wp-pagenavi {
+  clear: both;
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+}
+.wp-pagenavi span,
+.wp-pagenavi a {
+  line-height: 30px;
+  display: inline-block;
+  margin: 0 4px;
+  color: #666;
+  text-align: center;
+}
+.wp-pagenavi a,
+.wp-pagenavi span.current {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background: #ededed;
+}
+
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+  background: #1489c3;
+  color: #fff;
+}
+.wp-pagenavi .pages {
+  margin-right: 15px;
+}
+/*-----------------------------------------------------------
+Body
+-------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+  @include add_prefix(text-size-adjust, 100%);
+  @if $font_feature_settings_palt {
+    @include add_prefix(font-feature-settings, "palt");
+  }
+}
+html.is-ipad * {
+  @include add_prefix(text-size-adjust, none);
+}
+body {
+  @include ffN;
+  @include font-size(16);
+  width: 100%;
+  color: $color_body;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0;
+  height: 100%;
+  word-break: break-word;
+}
+
+/*-----------------------------------------------------------
+Container
+------------------------------------------------------------*/
+.container {
+  max-width: $widthcm;
+  margin: 0 auto;
+}
