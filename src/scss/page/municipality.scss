@@ -80,6 +80,93 @@
     margin-top: 35px;
     justify-content: space-between;
 
+    .sp-scrollbar {
+        display: none;
+
+        @include SP {
+            display: block;
+        }
+
+        margin-top: 50px;
+        margin-bottom: 70px;
+
+        ul {
+            border: 1px solid #000;
+            list-style-type: none;
+            padding: 0;
+            max-width: 335px;
+            margin: 0 auto;
+
+            .ttl {
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                line-height: calc(22/15);
+                color: #fff;
+                background: #000;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                &.active-sp span{
+                    transform: rotate(90deg);
+                    &:last-child{
+                        left: 50%;
+                        right: 50%
+                    }
+                }
+                a {
+                    position: relative;
+                    width: 24px;
+                    height: 24px;
+
+                    span {
+                        position: absolute;
+                        transition: 300ms;
+                        background: white;
+                        &:first-child{
+                            top: 20%;
+                            bottom: 20%;
+                            width: 1%;
+                            left: 48%;
+                        }
+                        &:last-child{
+                            right: 20%;
+                            left: 20%;
+                            height: 1%;
+                            top: 48%;
+                        }
+                    }
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            li{
+                &:not(.ttl) {
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.1em;
+                    line-height: calc(32/14);
+                    border-top: 1px solid #000;
+                    padding: 10px 0 10px 30px;
+                    position: relative;
+    
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background: url(../../img/municipality/arr-archorsp.svg);
+                        width: 4.5px;
+                        height: 9px;
+                        left: 16px;
+                        top: calc(50% - 4.5px);
+                    }
+                }
+            }
+        }
+    }
+
     .scroll-bar {
         width: 100%;
         max-width: 18%;
@@ -154,6 +241,10 @@
 
             }
         }
+
+        @include SP {
+            display: none;
+        }
     }
 
     .content {
@@ -215,6 +306,9 @@
                     &__img {
                         width: 39.5%;
                         padding-top: 2px;
+                        @include SP{
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -798,6 +892,13 @@
                 }
             }
         }
+        @include SP{
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+    @include SP{
+        display: block;
     }
 }
 
@@ -1001,4 +1102,7 @@
 
 #scroll {
     height: 290px;
+}
+#toggle{
+    display: none;
 }

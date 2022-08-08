@@ -25,6 +25,23 @@ include(APP_PATH . 'libs/head.php');
             </ul>
         </div>
         <div class="section">
+            <div class="sp-scrollbar">
+                <ul>
+                    <li id="dropd-sp" class="ttl">
+                        <p>カテゴリが選択できます</p>
+                        <a>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
+                    <div id="toggle">
+                        <li>開発の経緯</li>
+                        <li>導入のメリット</li>
+                        <li>仕様・オプション</li>
+                        <li>永年保証</li>
+                    </div>
+                </ul>
+            </div>
             <div class="scroll-bar">
                 <div id="scroll" class="list">
                     <ul>
@@ -587,5 +604,18 @@ include(APP_PATH . 'libs/head.php');
             scrollTop: 0
         }, 1000);
     });
+    $("#dropd-sp").click(function () {
+            $(".ttl").toggleClass("active-sp");
+            $("#toggle").slideDown("fast", function () {
+                if ($(".ttl").hasClass("active-sp")) {
+                    $("#toggle").css("display", "block");
+                }
+                else {
+                    $("#toggle").slideUp("fast", function () {
+                        $("#toggle").css("display", "none");
+                    });
+                }
+            })
+        });
     </script>
 </body>
