@@ -71,7 +71,7 @@ include(APP_PATH . 'libs/head.php');
                                 <h3 class="part__doc__ttl">大規模災害へのボランティア活動で気づいた<br class="pc">「ハイエース」の可能性</h3>
                                 <div class="part__doc__txt">
                                     ダミー私たちは建材・建築屋としての事業をベースにした会社です。<br class="pc">
-                                    そのネットワークで阪神淡路大震災、東日本大震災にもボランティア<br class="pc">
+                                    そのネットワークで阪神淡路大震災、東日本大震災にもボラン<br class="sp">ティア<br class="pc">
                                     活動をした経験があります。ボランティアに参加して活動拠点にする<br class="pc">
                                     には、避難拠点だけではなく、ボランティア活動のベース拠点として<br class="pc">
                                     もハイエースがベストだという考えに至りました
@@ -85,10 +85,10 @@ include(APP_PATH . 'libs/head.php');
                             <div class="part__doc">
                                 <h3 class="part__doc__ttl">高級なキャンピングカーを<br class="pc">導入することの難しさ</h3>
                                 <div class="part__doc__txt">
-                                    ダミー避難所としてのキャンピングカー「キャブコン」が、災害対策<br class="pc">
+                                    ダミー避難所としてのキャンピングカー<br class="sp">「キャブコン」が、災害対策<br class="pc">
                                     のために一部の自治体で導入が進められています。しかし避難民が数<br class="pc">
                                     千人規模となる現場で、全ての人が温水シャワーやエアコンが搭載さ<br class="pc">
-                                    れた高級キャンピングカーを利用することは、非現実的です。<br class="pc">
+                                    れた高級<br class="sp">キャンピングカーを利用することは、非現実的です。<br class="pc">
                                 </div>
                             </div>
                             <div class="part__img">
@@ -97,10 +97,11 @@ include(APP_PATH . 'libs/head.php');
                         </div>
                         <div class="blockGray">
                             <h4 class="heading">
-                                避難所として高級なキャンピングカーを導入することの問題点
+                                避難所として高級なキャンピング<br class="sp">カーを導入することの問題点
                             </h4>
                             <div class="blockGray__img">
-                                <img src="<?php echo APP_ASSETS; ?>img/municipality/item01-3.jpg" alt="">
+                                <img class="pc" src="<?php echo APP_ASSETS; ?>img/municipality/item01-3.jpg" alt="">
+                                <img class="sp" src="<?php echo APP_ASSETS; ?>img/municipality/item01-3-sp.jpg" alt="">
                             </div>
                             <ul class="list">
                                 <li>
@@ -139,8 +140,8 @@ include(APP_PATH . 'libs/head.php');
                             </ul>
                         </div>
                         <div class="txt">
-                            ダミー避難所としてのキャンピングカー「キャブコン」が、災害対策のために一部の自治体で導入が進められています。し<br class="pc">
-                            かし避難民が数千人規模となる現場で、全ての人が温水シャワーやエアコンが搭載された高級キャンピングカーを利用する<br class="pc">
+                            ダミー避難所としてのキャンピングカー<br class="sp">「キャブコン」が、災害対策のために一部の自治体で導入が進められています。し<br class="pc">
+                            かし避難民が数千人規模となる現場で、全ての人が温水シャワーやエアコンが搭載された高級<br class="sp">キャンピングカーを利用する<br class="pc">
                             ことは、非現実的です。
                         </div>
                     </div>
@@ -156,8 +157,9 @@ include(APP_PATH . 'libs/head.php');
                                     alt="">
                                 <h3 class="card__ttl">キャンピングカーに比べ低コスト</h3>
                                 <div class="card__txt">
-                                    １台1000万円以上もするキャンピングカーを購入する予算を確保することは、簡単なことではありません。しかしGL
-                                    BASEなら、ハイエース（対象車種）と合わせても●●万円程度となり、そのハードルはぐっと下がるはずです。
+                                    １台1000万円以上もするキャンピング<br class="sp">カーを購入する予算を確保することは、簡単なことではありません。しかしGL<br
+                                        class="sp">
+                                    BASEなら、ハイエース（対象車種）と合<br class="sp">わせても●●万円程度となり、そのハード<br class="sp">ルはぐっと下がるはずです。
                                 </div>
                             </li>
                             <li class="card">
@@ -192,7 +194,7 @@ include(APP_PATH . 'libs/head.php');
                                 <h3 class="card__ttl">法人への協力要請のしやすさ</h3>
                                 <div class="card__txt">
                                     キャンピングカーを何十台も災害対策車両として常時確保するには、固定資産やスペース上の問題がありますが、ハイエースであれば所有できる法人も多いです。通常時はハイエースを法人に所有していただけるため、災害時のみ市町村に貸し出していただくよう協力要請および導入のための助成がしやすくなります。
-                                    <br class="pc">（具体例は下記参照）
+                                    <br>（具体例は下記参照）
                                 </div>
                             </li>
                             <li class="card">
@@ -230,6 +232,12 @@ include(APP_PATH . 'libs/head.php');
                         <h4 class="blockOr__ttl">
                             GL BASE搭載の「ハイエーススーパーGL」基本構造
                         </h4>
+                        <div class="blockOr__img fimg">
+                            <img class="pc" src="<?php echo APP_ASSETS; ?>img/municipality/item03-4.jpg" alt="">
+                        </div>
+                        <div class="blockOr__img fimg sp">
+                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3-sp.jpg" alt="">
+                        </div>
                         <div class="blockOr__inner">
                             <div class="blockOr__inner--part">
                                 <div class="cont">
@@ -253,9 +261,6 @@ include(APP_PATH . 'libs/head.php');
                                         <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="blockOr__inner--img fimg">
-                                <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-4.jpg" alt="">
                             </div>
                             <div class="blockOr__inner--part">
                                 <div class="cont">
@@ -286,6 +291,10 @@ include(APP_PATH . 'libs/head.php');
                         <h4 class="blockOr__ttl">
                             GL BASE キャビネット機能詳細
                         </h4>
+                        <div class="blockOr__img">
+                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-6.jpg" alt="">
+                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-5.jpg" alt="">
+                        </div>
                         <div class="blockOr__inner">
                             <div class="blockOr__inner--part">
                                 <div class="cont">
@@ -312,10 +321,6 @@ include(APP_PATH . 'libs/head.php');
                                         ダミーセットフォード式の簡易トイレはここに設置します。
                                     </div>
                                 </div>
-                            </div>
-                            <div class="blockOr__inner--img">
-                                <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-6.jpg" alt="">
-                                <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-5.jpg" alt="">
                             </div>
                             <div class="blockOr__inner--part">
                                 <div class="cont">
@@ -604,18 +609,32 @@ include(APP_PATH . 'libs/head.php');
             scrollTop: 0
         }, 1000);
     });
-    $("#dropd-sp").click(function () {
-            $(".ttl").toggleClass("active-sp");
-            $("#toggle").slideDown("fast", function () {
-                if ($(".ttl").hasClass("active-sp")) {
-                    $("#toggle").css("display", "block");
-                }
-                else {
-                    $("#toggle").slideUp("fast", function () {
-                        $("#toggle").css("display", "none");
-                    });
-                }
+    $("#dropd-sp").click(function() {
+        $(".ttl").toggleClass("active-sp");
+        $("#toggle").slideDown("fast", function() {
+            if ($(".ttl").hasClass("active-sp")) {
+                $("#toggle").css("display", "block");
+            } else {
+                $("#toggle").slideUp("fast", function() {
+                    $("#toggle").css("display", "none");
+                });
+            }
+        })
+    });
+
+    $(document).ready(function() {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+           if( $('.cont').parent().is("div"))
+           {
+            $('.cont').unwrap();
+            $('.cont').addClass('cont');
+            $('.blockOr__inner').slick({
+                infinite: false,
+                dots: false,
             })
-        });
+           }
+
+        }
+    })
     </script>
 </body>

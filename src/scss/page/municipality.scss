@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 @import '../utility/*';
+@import 'slick-theme.scss';
 
 .pc {
     display: none;
@@ -268,6 +269,11 @@
                 letter-spacing: 0.1em;
                 padding-left: 60px;
                 margin: 0 auto;
+                @include SP{
+                    height:95px;
+                    justify-content: center;
+                    padding-left:0;
+                }
             }
 
             &__inside {
@@ -275,16 +281,24 @@
                 max-width: 967px;
                 position: relative;
                 margin: 0 auto;
-
+                @include SP{
+                    padding:0 20px;
+                }
                 .part {
                     display: flex;
                     margin-top: 55px;
                     justify-content: space-between;
                     width: 100%;
-
+                    @include SP{
+                        flex-wrap: wrap;
+                        margin-top: 40px;
+                    }
                     &__doc {
                         width: 56.5%;
-
+                        @include SP{
+                            width: 100%;
+                            order:2;
+                        }
                         &__ttl {
                             color: #000;
                             font-size: 24px;
@@ -292,6 +306,11 @@
                             letter-spacing: 0.1em;
                             line-height: 40px;
                             margin-bottom: 20px;
+                            @include SP{
+                                font-size:20px;
+                                line-height: calc(34/20);
+                                margin-top:15px;
+                            }
                         }
 
                         &__txt {
@@ -300,6 +319,10 @@
                             font-weight: 400;
                             letter-spacing: 0.1em;
                             line-height: 30px;
+                            @include SP{
+                                font-size:15px;
+                                line-height: calc(30/15);
+                            }
                         }
                     }
 
@@ -317,22 +340,35 @@
                     width: 100%;
                     padding: 25px;
                     background: #F2F0E7 url(../../img/municipality/bg-footer.png);
-
+                    @include SP{
+                        padding: 25px 20px;
+                    }
                     .heading {
                         width: 100%;
                         font-size: 20px;
                         color: #000;
                         letter-spacing: 0.1em;
-                        font-weight: bold;
+                        font-weight: 900;
                         line-height: 44px;
                         align-items: center;
                         text-align: center;
+                        @include SP{
+                            font-size: 16px;
+                            line-height: calc(28/16);
+                            text-align: left;
+                        }
                     }
 
                     &__img {
                         margin: 30px auto;
                         width: 100%;
                         max-width: 868px;
+                        @include SP{
+                            img{
+                                margin: 0 auto;
+                                width: 100%;
+                            }
+                        }
                     }
 
                     .list {
@@ -350,7 +386,11 @@
                             color: #000;
                             letter-spacing: 0.1rem;
                             margin: 15px 0;
-
+                            @include SP{
+                                display: block;
+                                font-size:14px;
+                                line-height: calc(24/14);
+                            }
                             .txt1 {
                                 position: relative;
                                 width: 170px;
@@ -372,6 +412,9 @@
                                     content: ":";
                                     position: absolute;
                                     right: 22px;
+                                    @include SP{
+                                        display: none;
+                                    }
                                 }
 
                             }
@@ -383,7 +426,12 @@
                     font-size: 16px;
                     line-height: calc(34/16);
                     letter-spacing: 0.1em;
-                    margin-top: 50px
+                    margin-top: 50px;
+                    @include SP{
+                        font-size:15px;
+                        line-height: calc(30/15);
+                        margin-top:20px;
+                    }
                 }
 
                 .blockOrg {
@@ -400,12 +448,21 @@
                         position: relative;
                         width: calc(50% - 14px);
                         margin-bottom: 60px;
-
+                        @include SP{
+                            width: 100%;
+                            padding:41px 15px 28px;
+                            margin-bottom:39px;
+                        }
                         &__img {
                             width: 82px;
                             position: absolute;
                             top: -42px;
                             right: calc(100% - 270px);
+                            @include SP{
+                                width: 58px;
+                                top:-31px;
+                                right: calc(50% - 32px);
+                            }
                         }
 
                         &__ttl {
@@ -415,6 +472,11 @@
                             letter-spacing: 0.1em;
                             padding-left: 30px;
                             position: relative;
+                            @include SP{
+                                font-size: 16px;
+                                line-height: calc(22/16);
+                                padding-left: 25px;
+                            }
 
                             &:before {
                                 counter-increment: section;
@@ -426,6 +488,11 @@
                                 font-weight: bold;
                                 left: -3px;
                                 top: -15px;
+                                @include SP{
+                                    font-size:26px;
+                                    left:0;
+                                    top:-7px;
+                                }
                             }
                         }
 
@@ -434,11 +501,17 @@
                             line-height: calc(22/14);
                             letter-spacing: 0.1em;
                             margin-top: 9px;
-
+                            @include SP{
+                                font-size: 14px;
+                                line-height: calc(22/14);
+                                margin-top:12px;
+                            }
                             >p {
                                 padding-left: 20px;
                                 position: relative;
-
+                                @include SP{
+                                    margin-bottom:5px;
+                                }
                                 &:before {
                                     content: "・";
                                     position: absolute;
@@ -454,6 +527,10 @@
                     line-height: calc(28/18);
                     letter-spacing: 0.1em;
                     font-weight: bold;
+                    @include SP{
+                        font-size: 16px;
+                        line-height: calc(28/16);
+                    }
                 }
 
                 &--txt {
@@ -462,7 +539,11 @@
                     line-height: calc(24/14);
                     letter-spacing: 0.1em;
                     counter-reset: section;
-
+                    @include SP{
+                        font-size: 13px;
+                        line-height: calc(22/13);
+                        margin-top:15px;
+                    }
                     >p {
                         position: relative;
                         padding-left: 20px;
@@ -477,6 +558,10 @@
                             font-weight: bold;
                             color: #E59601;
                             left: -0;
+                            @include SP{
+                                font-size: 16px;
+                                top:-2px;
+                            }
                         }
                     }
                 }
@@ -613,6 +698,13 @@
                 line-height: calc(42/26);
                 text-align: center;
                 margin-top: 50px;
+                @include SP{
+                    font-size: 24px;
+                    line-height: calc(34/24);
+                    padding:0 50px;
+                    font-weight: 900;
+                    margin-top:30px;
+                }
             }
 
             .blockOr {
@@ -622,7 +714,11 @@
                 max-width: 987px;
                 margin-left: auto;
                 margin-right: auto;
-
+                position: relative;
+                @include SP{
+                    margin-top:25px;
+                    width: calc(100% - 40px);
+                }
                 &__ttl {
                     background-color: #E59601;
                     color: #fff;
@@ -632,13 +728,51 @@
                     line-height: calc(42/22);
                     text-align: center;
                     padding: 10px 0;
+                    @include SP{
+                        font-size: 20px;
+                        line-height: calc(26/20);
+                        padding: 19.5px 30px;
+                        text-align: left;
+                    }
+                }
+                &__img{
+                    position: absolute;
+                    width: 29%;
+                    margin: 0 auto;
+                    top: 111px;
+                    left:35.7%;
+
+                    &.fimg {
+                        top:141px;
+                        width: 24.4%;
+                        left:37.7%;
+                        @include SP{
+                            top:25px;
+                            left:0;
+                            position: relative;
+                            width: calc(100% - 38px);
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    >img {
+                        &:not(:last-child) {
+                            margin-bottom: 30px;
+                        }
+                    }
                 }
 
                 &__inner {
                     margin: 50px;
                     display: flex;
                     justify-content: space-between;
-
+                    position: relative;
+                    @include SP{
+                        display: block;
+                        margin:19px;
+                    }
                     &.dB {
                         display: block;
                     }
@@ -647,12 +781,17 @@
                         display: block;
                         width: 100%;
                         max-width: 31.5%;
-
+                        @include SP{
+                            max-width: 100%;
+                            margin-top:25px;
+                        }
                         .cont {
                             background-color: #F2F0E7;
                             padding: 22px 25px;
                             margin-bottom: 15px;
-
+                            @include SP{
+                                padding: 22px 20px;
+                            }
                             &__ttl {
                                 font-size: 18px;
                                 font-weight: bold;
@@ -682,24 +821,13 @@
                             }
 
                             &__img {
-                                width: 226px;
+                                width: 100%;
+                                max-width: 226px;
                                 margin: 0 auto;
-                            }
-                        }
-                    }
-
-                    &--img {
-                        width: 100%;
-                        margin: 0 auto;
-                        max-width: 280px;
-
-                        &.fimg {
-                            max-width: 240px;
-                        }
-
-                        >img {
-                            &:not(:last-child) {
-                                margin-bottom: 30px;
+                                @include SP{
+                                    width: 100%;
+                                    max-width: 100%;
+                                }
                             }
                         }
                     }
@@ -1105,4 +1233,51 @@
 }
 #toggle{
     display: none;
+}
+
+.cont{
+    background-color: #F2F0E7;
+    padding: 22px 20px;
+    margin-bottom: 15px;
+    &__ttl {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        line-height: calc(28/18);
+        >em {
+            @include lato;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #E59601;
+            border-radius: 50%;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            font-style: normal;
+            text-align: center;
+        }
+    }
+
+    &__txt {
+        margin-top: 15px;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        line-height: calc(24/14);
+    }
+
+    &__img {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+.slick-track{
+    display: flex;
+}
+.slick-list{
+    width: 100%;
+}
+.slick-slide{
+    width: 100%;
 }
