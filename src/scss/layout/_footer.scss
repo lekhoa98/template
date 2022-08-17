@@ -1,6 +1,8 @@
 @charset 'UTF-8';
 
-
+body{
+  overflow-x:hidden;
+}
 .sp {
   display: none;
 
@@ -38,7 +40,10 @@
       margin-left: 80px;
 
       @include SP {
-        margin-left: 20px;
+        width: 100%;
+        max-width: 460px;
+        padding-left: 20px;
+        margin-left:0;
       }
 
       .fcontent {

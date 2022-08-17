@@ -238,53 +238,57 @@ include(APP_PATH . 'libs/head.php');
                         <div class="blockOr__img fimg sp">
                             <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3-sp.jpg" alt="">
                         </div>
-                        <div class="blockOr__inner">
-                            <div class="blockOr__inner--part">
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>1</em>
-                                        運転席・助手席
+                        <div class="slide sp">
+                            <div id="slide1" class="blockOr__inner">
+                                <div class="blockOr__inner--part">
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>1</em>
+                                            運転席・助手席
+                                        </div>
+                                        <div class="cont__txt">
+                                            ダミー通常のハイエースではデッドスペースとなる運転席と助手席の背面にも人が座れるよう、座面シートを装備。後ろ向き２人分の座席が増えます。（背もたれはオプションで追加装備可能）
+                                        </div>
                                     </div>
-                                    <div class="cont__txt">
-                                        ダミー通常のハイエースではデッドスペースとなる運転席と助手席の背面にも人が座れるよう、座面シートを装備。後ろ向き２人分の座席が増えます。（背もたれはオプションで追加装備可能）
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>3</em>
+                                            リアシート
+                                        </div>
+                                        <div class="cont__txt">
+                                            背もたれを前方に折り畳むと、汎用性の高い大きなテーブルが出現。作業台や食卓など幅広く活用できます。<br
+                                                class="pc">（0000mm×000mm）
+                                        </div>
+                                        <div class="cont__img">
+                                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>3</em>
-                                        リアシート
+                                <div class="blockOr__inner--part">
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>2</em>
+                                            ダミー座面シート
+                                        </div>
+                                        <div class="cont__txt">
+                                            通常のハイエースではデッドスペースとなる運転席と助手席の背面にも人が座れるよう、座面シートを装備。後ろ向き２人分の座席が増えます。（背もたれはオプションで追加装備可能）
+                                        </div>
+                                        <div class="cont__img">
+                                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-2.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div class="cont__txt">
-                                        背もたれを前方に折り畳むと、汎用性の高い大きなテーブルが出現。作業台や食卓など幅広く活用できます。<br class="pc">（0000mm×000mm）
-                                    </div>
-                                    <div class="cont__img">
-                                        <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>4</em>
+                                            荷室
+                                        </div>
+                                        <div class="cont__txt">
+                                            この部分にGL BASEのユニットが組み込まれます。バッテリー・簡易トイレの専用スペース・シンクなどが入ります。
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="blockOr__inner--part">
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>2</em>
-                                        ダミー座面シート
-                                    </div>
-                                    <div class="cont__txt">
-                                        通常のハイエースではデッドスペースとなる運転席と助手席の背面にも人が座れるよう、座面シートを装備。後ろ向き２人分の座席が増えます。（背もたれはオプションで追加装備可能）
-                                    </div>
-                                    <div class="cont__img">
-                                        <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>4</em>
-                                        荷室
-                                    </div>
-                                    <div class="cont__txt">
-                                        この部分にGL BASEのユニットが組み込まれます。バッテリー・簡易トイレの専用スペース・シンクなどが入ります。
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="btn-slideshow sp"></div>
                         </div>
                     </div>
                     <div class="blockOr blockOr--02">
@@ -293,70 +297,73 @@ include(APP_PATH . 'libs/head.php');
                         </h4>
                         <div class="blockOr__img">
                             <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-6.jpg" alt="">
-                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-5.jpg" alt="">
+
                         </div>
-                        <div class="blockOr__inner">
-                            <div class="blockOr__inner--part">
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>1</em>
-                                        ダミーキャビネット
+                        <div class="slide sp">
+                            <div id="slide2" class="blockOr__inner">
+                                <div class="blockOr__inner--part">
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>1</em>
+                                            ダミーキャビネット
+                                        </div>
+                                        <div class="cont__txt">
+                                            上下分割機能付きの大型キャビネット。❸の天板が収納できます。
+                                        </div>
+                                        <div class="cont__img">
+                                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
+                                        </div>
+                                        <div class="cont__txt">
+                                            オプションでオールフラット仕様も追加できます。
+                                        </div>
                                     </div>
-                                    <div class="cont__txt">
-                                        上下分割機能付きの大型キャビネット。❸の天板が収納できます。
-                                    </div>
-                                    <div class="cont__img">
-                                        <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
-                                    </div>
-                                    <div class="cont__txt">
-                                        オプションでオールフラット仕様も追加できます。
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>2</em>
+                                            ダミーキャビネット
+                                        </div>
+                                        <div class="cont__txt">
+                                            ダミーセットフォード式の簡易トイレはここに設置します。
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>2</em>
-                                        ダミーキャビネット
+                                <div class="blockOr__inner--part">
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>3</em>
+                                            ダミーキャビネット
+                                        </div>
+                                        <div class="cont__txt">
+                                            ダミー背もたれを前方に折り畳むと、汎用性の高い大きなテーブルが出現。
+                                        </div>
+                                        <div class="cont__img">
+                                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-2.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div class="cont__txt">
-                                        ダミーセットフォード式の簡易トイレはここに設置します。
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>4</em>
+                                            ダミーキャビネット
+                                        </div>
+                                        <div class="cont__txt">
+                                            パッキング方式のトイレはここに設置します。
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <div class="cont__ttl">
+                                            <em>5</em>
+                                            ダミーキャビネット
+                                        </div>
+                                        <div class="cont__txt">
+                                            自治体・医療法人製品のみを対象にシンクを標準搭載しています。
+                                        </div>
+                                        <div class="cont__img">
+                                            <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="blockOr__inner--part">
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>3</em>
-                                        ダミーキャビネット
-                                    </div>
-                                    <div class="cont__txt">
-                                        ダミー背もたれを前方に折り畳むと、汎用性の高い大きなテーブルが出現。
-                                    </div>
-                                    <div class="cont__img">
-                                        <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>4</em>
-                                        ダミーキャビネット
-                                    </div>
-                                    <div class="cont__txt">
-                                        パッキング方式のトイレはここに設置します。
-                                    </div>
-                                </div>
-                                <div class="cont">
-                                    <div class="cont__ttl">
-                                        <em>5</em>
-                                        ダミーキャビネット
-                                    </div>
-                                    <div class="cont__txt">
-                                        自治体・医療法人製品のみを対象にシンクを標準搭載しています。
-                                    </div>
-                                    <div class="cont__img">
-                                        <img src="<?php echo APP_ASSETS; ?>img/municipality/item03-3.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="btn2-slideshow sp"></div>
                         </div>
                     </div>
                     <div class="blockOr blockOr--03">
@@ -489,7 +496,7 @@ include(APP_PATH . 'libs/head.php');
                             自治体・医療法人のみを対象とした永年保証
                         </div>
                         <div class="infor__txt">
-                            ダミー私たちは社会貢献の一環として、自治体・医療法人向け商品に限り、永年保証サービスを行っております。<br class="pc">
+                            ダミー私たちは社会貢献の一環として、自治体・医療法人向け商品に限り、永年保証サービスを行っております。<br>
                             災害ボランティアや自治体等のご利用において、重量物の高出力発電機を乗せた緊急用のポンプや被災地用浄水機動設備など、一時的であっても思わぬ負荷を乗せてしまい損傷した場合、写真や参加証明をお送りいただければ、特例として無償ですべて交換いたします。保障年数に関係なくご相談ください。
                         </div>
                     </div>
@@ -522,7 +529,7 @@ include(APP_PATH . 'libs/head.php');
         <div class="contactbox">
             <div class="outside">
                 <p class="ttl">お問い合わせ</p>
-                <p class="txt">製品に関するご質問など、お気軽にお問い合わせください。</p>
+                <p class="txt">製品に関するご質問など、<br c;ass="sp">お気軽にお問い合わせください。</p>
                 <div class="box-inside">
                     <div class="box-inside__part">
                         <p class="box-inside__part--ttl">
@@ -624,16 +631,26 @@ include(APP_PATH . 'libs/head.php');
 
     $(document).ready(function() {
         if (window.matchMedia('(max-width: 768px)').matches) {
-           if( $('.cont').parent().is("div"))
-           {
-            $('.cont').unwrap();
-            $('.cont').addClass('cont');
-            $('.blockOr__inner').slick({
+            if ($('.cont').parent().is("div")) {
+                $('.cont').unwrap();
+                $('.cont').addClass('cont');
+            }
+            $('#slide1').slick({
                 infinite: false,
-                dots: false,
+                dots: true,
+                appendArrows: ".btn-slideshow",
+                appendDots: ".btn-slideshow",
+                prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
+                nextArrow: "<button type'button' class='slick-next'>Next</button>",
             })
-           }
-
+            $('#slide2').slick({
+                infinite: false,
+                dots: true,
+                appendArrows: ".btn2-slideshow",
+                appendDots: ".btn2-slideshow",
+                prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
+                nextArrow: "<button type'button' class='slick-next'>Next</button>",
+            })
         }
     })
     </script>

@@ -108,13 +108,16 @@
                 padding: 15px;
                 display: flex;
                 justify-content: space-between;
-                &.active-sp span{
+
+                &.active-sp span {
                     transform: rotate(90deg);
-                    &:last-child{
+
+                    &:last-child {
                         left: 50%;
                         right: 50%
                     }
                 }
+
                 a {
                     position: relative;
                     width: 24px;
@@ -124,13 +127,15 @@
                         position: absolute;
                         transition: 300ms;
                         background: white;
-                        &:first-child{
+
+                        &:first-child {
                             top: 20%;
                             bottom: 20%;
                             width: 1%;
                             left: 48%;
                         }
-                        &:last-child{
+
+                        &:last-child {
                             right: 20%;
                             left: 20%;
                             height: 1%;
@@ -144,7 +149,7 @@
                 }
             }
 
-            li{
+            li {
                 &:not(.ttl) {
                     font-size: 14px;
                     font-weight: 400;
@@ -153,7 +158,7 @@
                     border-top: 1px solid #000;
                     padding: 10px 0 10px 30px;
                     position: relative;
-    
+
                     &:before {
                         content: "";
                         position: absolute;
@@ -269,10 +274,11 @@
                 letter-spacing: 0.1em;
                 padding-left: 60px;
                 margin: 0 auto;
-                @include SP{
-                    height:95px;
+
+                @include SP {
+                    height: 95px;
                     justify-content: center;
-                    padding-left:0;
+                    padding-left: 0;
                 }
             }
 
@@ -281,24 +287,30 @@
                 max-width: 967px;
                 position: relative;
                 margin: 0 auto;
-                @include SP{
-                    padding:0 20px;
+
+                @include SP {
+                    padding: 0 20px;
                 }
+
                 .part {
                     display: flex;
                     margin-top: 55px;
                     justify-content: space-between;
                     width: 100%;
-                    @include SP{
+
+                    @include SP {
                         flex-wrap: wrap;
                         margin-top: 40px;
                     }
+
                     &__doc {
                         width: 56.5%;
-                        @include SP{
+
+                        @include SP {
                             width: 100%;
-                            order:2;
+                            order: 2;
                         }
+
                         &__ttl {
                             color: #000;
                             font-size: 24px;
@@ -306,10 +318,11 @@
                             letter-spacing: 0.1em;
                             line-height: 40px;
                             margin-bottom: 20px;
-                            @include SP{
-                                font-size:20px;
+
+                            @include SP {
+                                font-size: 20px;
                                 line-height: calc(34/20);
-                                margin-top:15px;
+                                margin-top: 15px;
                             }
                         }
 
@@ -319,8 +332,9 @@
                             font-weight: 400;
                             letter-spacing: 0.1em;
                             line-height: 30px;
-                            @include SP{
-                                font-size:15px;
+
+                            @include SP {
+                                font-size: 15px;
                                 line-height: calc(30/15);
                             }
                         }
@@ -329,7 +343,8 @@
                     &__img {
                         width: 39.5%;
                         padding-top: 2px;
-                        @include SP{
+
+                        @include SP {
                             width: 100%;
                         }
                     }
@@ -340,9 +355,11 @@
                     width: 100%;
                     padding: 25px;
                     background: #F2F0E7 url(../../img/municipality/bg-footer.png);
-                    @include SP{
+
+                    @include SP {
                         padding: 25px 20px;
                     }
+
                     .heading {
                         width: 100%;
                         font-size: 20px;
@@ -352,7 +369,8 @@
                         line-height: 44px;
                         align-items: center;
                         text-align: center;
-                        @include SP{
+
+                        @include SP {
                             font-size: 16px;
                             line-height: calc(28/16);
                             text-align: left;
@@ -363,8 +381,9 @@
                         margin: 30px auto;
                         width: 100%;
                         max-width: 868px;
-                        @include SP{
-                            img{
+
+                        @include SP {
+                            img {
                                 margin: 0 auto;
                                 width: 100%;
                             }
@@ -386,11 +405,13 @@
                             color: #000;
                             letter-spacing: 0.1rem;
                             margin: 15px 0;
-                            @include SP{
+
+                            @include SP {
                                 display: block;
-                                font-size:14px;
+                                font-size: 14px;
                                 line-height: calc(24/14);
                             }
+
                             .txt1 {
                                 position: relative;
                                 width: 170px;
@@ -412,7 +433,8 @@
                                     content: ":";
                                     position: absolute;
                                     right: 22px;
-                                    @include SP{
+
+                                    @include SP {
                                         display: none;
                                     }
                                 }
@@ -427,10 +449,11 @@
                     line-height: calc(34/16);
                     letter-spacing: 0.1em;
                     margin-top: 50px;
-                    @include SP{
-                        font-size:15px;
+
+                    @include SP {
+                        font-size: 15px;
                         line-height: calc(30/15);
-                        margin-top:20px;
+                        margin-top: 20px;
                     }
                 }
 
@@ -448,19 +471,22 @@
                         position: relative;
                         width: calc(50% - 14px);
                         margin-bottom: 60px;
-                        @include SP{
+
+                        @include SP {
                             width: 100%;
-                            padding:41px 15px 28px;
-                            margin-bottom:39px;
+                            padding: 41px 15px 28px;
+                            margin-bottom: 39px;
                         }
+
                         &__img {
                             width: 82px;
                             position: absolute;
                             top: -42px;
                             right: calc(100% - 270px);
-                            @include SP{
+
+                            @include SP {
                                 width: 58px;
-                                top:-31px;
+                                top: -31px;
                                 right: calc(50% - 32px);
                             }
                         }
@@ -472,7 +498,8 @@
                             letter-spacing: 0.1em;
                             padding-left: 30px;
                             position: relative;
-                            @include SP{
+
+                            @include SP {
                                 font-size: 16px;
                                 line-height: calc(22/16);
                                 padding-left: 25px;
@@ -488,10 +515,11 @@
                                 font-weight: bold;
                                 left: -3px;
                                 top: -15px;
-                                @include SP{
-                                    font-size:26px;
-                                    left:0;
-                                    top:-7px;
+
+                                @include SP {
+                                    font-size: 26px;
+                                    left: 0;
+                                    top: -7px;
                                 }
                             }
                         }
@@ -501,17 +529,21 @@
                             line-height: calc(22/14);
                             letter-spacing: 0.1em;
                             margin-top: 9px;
-                            @include SP{
+
+                            @include SP {
                                 font-size: 14px;
                                 line-height: calc(22/14);
-                                margin-top:12px;
+                                margin-top: 12px;
                             }
+
                             >p {
                                 padding-left: 20px;
                                 position: relative;
-                                @include SP{
-                                    margin-bottom:5px;
+
+                                @include SP {
+                                    margin-bottom: 5px;
                                 }
+
                                 &:before {
                                     content: "・";
                                     position: absolute;
@@ -527,7 +559,8 @@
                     line-height: calc(28/18);
                     letter-spacing: 0.1em;
                     font-weight: bold;
-                    @include SP{
+
+                    @include SP {
                         font-size: 16px;
                         line-height: calc(28/16);
                     }
@@ -539,11 +572,13 @@
                     line-height: calc(24/14);
                     letter-spacing: 0.1em;
                     counter-reset: section;
-                    @include SP{
+
+                    @include SP {
                         font-size: 13px;
                         line-height: calc(22/13);
-                        margin-top:15px;
+                        margin-top: 15px;
                     }
+
                     >p {
                         position: relative;
                         padding-left: 20px;
@@ -558,9 +593,10 @@
                             font-weight: bold;
                             color: #E59601;
                             left: -0;
-                            @include SP{
+
+                            @include SP {
                                 font-size: 16px;
-                                top:-2px;
+                                top: -2px;
                             }
                         }
                     }
@@ -568,6 +604,10 @@
 
                 .infor {
                     padding: 60px 0 20px 0;
+
+                    @include SP {
+                        padding: 30px 0 0;
+                    }
 
                     img {
                         width: 100%;
@@ -580,12 +620,22 @@
                         line-height: calc(52/20);
                         letter-spacing: 0.1em;
                         margin: 20px 0;
+
+                        @include SP {
+                            font-size: 18px;
+                            line-height: calc(30/18);
+                        }
                     }
 
                     &__txt {
                         font-size: 16px;
                         letter-spacing: 0.1em;
                         line-height: calc(34/16);
+
+                        @include SP {
+                            font-size: 15px;
+                            line-height: calc(30/15);
+                        }
                     }
                 }
 
@@ -596,9 +646,13 @@
                     justify-content: space-between;
                     flex-wrap: wrap;
 
+                    @include SP {
+                        margin-top: 40px;
+                    }
+
                     .ques {
                         padding-top: 20px;
-                        width: 95%;
+                        width: 92%;
                         font-size: 18px;
                         font-weight: 400;
                         letter-spacing: 0.1em;
@@ -606,6 +660,12 @@
                         margin-bottom: 20px;
                         position: relative;
                         padding-left: 50px;
+
+                        @include SP {
+                            font-size: 15px;
+                            line-height: calc(24/15);
+                            padding-left: 38px;
+                        }
 
                         &:before {
                             content: 'Q.';
@@ -616,6 +676,11 @@
                             position: absolute;
                             left: 0;
                             top: 0;
+
+                            @include SP {
+                                font-size: 26px;
+                                top: 6px;
+                            }
                         }
                     }
 
@@ -624,6 +689,10 @@
                         width: 5%;
                         justify-content: flex-end;
                         align-items: center;
+
+                        @include SP {
+                            width: 8%;
+                        }
 
                         .dropdown {
                             width: 24px;
@@ -673,6 +742,11 @@
                         position: relative;
                         display: none;
 
+                        @include SP {
+                            font-size: 14px;
+                            line-height: calc(24/14);
+                        }
+
                         a {
                             color: #1A0DAB;
                             text-decoration: underline;
@@ -698,12 +772,13 @@
                 line-height: calc(42/26);
                 text-align: center;
                 margin-top: 50px;
-                @include SP{
+
+                @include SP {
                     font-size: 24px;
                     line-height: calc(34/24);
-                    padding:0 50px;
+                    padding: 0 50px;
                     font-weight: 900;
-                    margin-top:30px;
+                    margin-top: 30px;
                 }
             }
 
@@ -715,10 +790,12 @@
                 margin-left: auto;
                 margin-right: auto;
                 position: relative;
-                @include SP{
-                    margin-top:25px;
+
+                @include SP {
+                    margin-top: 25px;
                     width: calc(100% - 40px);
                 }
+
                 &__ttl {
                     background-color: #E59601;
                     color: #fff;
@@ -728,39 +805,58 @@
                     line-height: calc(42/22);
                     text-align: center;
                     padding: 10px 0;
-                    @include SP{
+
+                    @include SP {
                         font-size: 20px;
                         line-height: calc(26/20);
                         padding: 19.5px 30px;
                         text-align: left;
                     }
                 }
-                &__img{
+
+                &__img {
                     position: absolute;
                     width: 29%;
                     margin: 0 auto;
                     top: 111px;
-                    left:35.7%;
+                    left: 35.7%;
 
                     &.fimg {
-                        top:141px;
+                        top: 141px;
                         width: 24.4%;
-                        left:37.7%;
-                        @include SP{
-                            top:25px;
-                            left:0;
+                        left: 37.7%;
+
+                        @include SP {
+                            top: 25px;
+                            left: 0;
                             position: relative;
                             width: calc(100% - 38px);
-                            img{
-                                width: 100%;
-                            }
+                            padding: 0;
                         }
                     }
 
                     >img {
                         &:not(:last-child) {
                             margin-bottom: 30px;
+
+                            @include SP {
+                                width: 100%;
+                            }
                         }
+
+                        @include SP {
+                            width: 100%;
+                        }
+                    }
+
+                    @include SP {
+                        top: 25px;
+                        left: 0;
+                        position: relative;
+                        width: calc(100% - 38px);
+                        padding: 0 27.5px;
+                        margin: 0 auto 15px;
+                        ;
                     }
                 }
 
@@ -769,10 +865,13 @@
                     display: flex;
                     justify-content: space-between;
                     position: relative;
-                    @include SP{
+
+                    @include SP {
                         display: block;
-                        margin:19px;
+                        margin: 35px 19px 20px 19px;
+                        overflow: hidden;
                     }
+
                     &.dB {
                         display: block;
                     }
@@ -781,17 +880,21 @@
                         display: block;
                         width: 100%;
                         max-width: 31.5%;
-                        @include SP{
+
+                        @include SP {
                             max-width: 100%;
-                            margin-top:25px;
+                            margin-top: 25px;
                         }
+
                         .cont {
                             background-color: #F2F0E7;
                             padding: 22px 25px;
                             margin-bottom: 15px;
-                            @include SP{
+
+                            @include SP {
                                 padding: 22px 20px;
                             }
+
                             &__ttl {
                                 font-size: 18px;
                                 font-weight: bold;
@@ -824,7 +927,8 @@
                                 width: 100%;
                                 max-width: 226px;
                                 margin: 0 auto;
-                                @include SP{
+
+                                @include SP {
                                     width: 100%;
                                     max-width: 100%;
                                 }
@@ -837,6 +941,10 @@
                         width: 100%;
                         max-width: 49.4%;
 
+                        @include SP {
+                            max-width: 100%;
+                        }
+
                         .forin-ttl {
                             font-size: 18px;
                             font-weight: bold;
@@ -844,11 +952,21 @@
                             line-height: calc(28/18);
                             margin-bottom: 10px;
 
+                            @include SP {
+                                font-size: 16px;
+                                line-height: calc(28/16);
+                            }
+
                             >span {
                                 font-size: 14px;
                                 line-height: calc(28/14);
                                 letter-spacing: 0.1em;
                                 font-weight: 400;
+
+                                @include SP {
+                                    font-size: 12px;
+                                    line-height: calc(28/12);
+                                }
                             }
                         }
 
@@ -856,12 +974,22 @@
                             width: 100%;
                             max-width: 424px;
                             margin-bottom: 10px;
+
+                            @include SP {
+                                max-width: 100%;
+                            }
                         }
 
                         .forin-txt {
                             font-size: 14px;
                             line-height: calc(24/14);
                             letter-spacing: 0.1em;
+
+                            @include SP {
+                                font-size: 14px;
+                                line-height: calc(26/14);
+                                margin-bottom: 10px;
+                            }
                         }
                     }
 
@@ -882,6 +1010,11 @@
                                     opacity: 1;
                                 }
                             }
+
+                            @include SP {
+                                font-size: 12px;
+                                line-height: calc(18/12);
+                            }
                         }
 
                         p {
@@ -889,6 +1022,11 @@
                             letter-spacing: 0.1em;
                             line-height: calc(32/13);
                             margin: 15px 0 20px 0;
+
+                            @include SP {
+                                font-size: 14px;
+                                line-height: calc(20/14);
+                            }
 
                             &.ttl {
                                 font-size: 18px;
@@ -920,6 +1058,11 @@
                                     height: 5px;
                                     left: 0;
                                     top: 10px;
+                                }
+
+                                @include SP {
+                                    font-size: 14px;
+                                    line-height: calc(20/14);
                                 }
                             }
 
@@ -957,11 +1100,25 @@
                                 line-height: calc(24/14);
                                 padding: 20px;
                             }
+
+                            @include SP {
+                                width: 100%;
+                            }
                         }
 
                         .entry-img {
                             width: 43%;
                             max-width: 319px;
+
+                            @include SP {
+                                width: 100%;
+                                max-width: 100%;
+                                margin-top: 20px;
+                            }
+                        }
+
+                        @include SP {
+                            flex-wrap: wrap;
                         }
                     }
                 }
@@ -981,6 +1138,11 @@
                 position: relative;
                 cursor: pointer;
 
+                @include SP {
+                    max-width: 335px;
+                    padding: 16.25px 0;
+                }
+
                 a {
                     text-decoration: none;
                     position: relative;
@@ -994,11 +1156,19 @@
                         width: 20px;
                         right: calc(50% - 190px);
                         top: 12px;
+
+                        @include SP {
+                            right: calc(50% - 167px);
+                        }
                     }
 
                     &:hover {
                         opacity: 1;
                         color: #fff;
+
+                        @include SP {
+                            color: #000;
+                        }
                     }
                 }
 
@@ -1011,6 +1181,11 @@
                     top: 0;
                     left: 0;
                     transition: 0.3s all;
+
+                    @include SP {
+                        width: 100%;
+                        background-color: #000;
+                    }
                 }
 
                 &:hover {
@@ -1020,12 +1195,14 @@
                 }
             }
         }
-        @include SP{
+
+        @include SP {
             max-width: 100%;
             flex-wrap: wrap;
         }
     }
-    @include SP{
+
+    @include SP {
         display: block;
     }
 }
@@ -1041,6 +1218,11 @@
         background-color: #E59601;
         padding: 60px 90px;
 
+        @include SP {
+            width: calc(100% - 40px);
+            padding: 20px 24px;
+        }
+
         .ttl {
             font-weight: 900;
             font-size: 40px;
@@ -1048,6 +1230,11 @@
             letter-spacing: 0.1em;
             color: #fff;
             text-align: center;
+
+            @include SP {
+                font-size: 28px;
+                line-height: calc((54/28));
+            }
         }
 
         .txt {
@@ -1057,6 +1244,12 @@
             line-height: calc(34/16);
             color: #fff;
             text-align: center;
+
+            @include SP {
+                font-size: 14px;
+                line-height: calc(24/14);
+                padding: 0 25px;
+            }
         }
 
         .box-inside {
@@ -1064,11 +1257,23 @@
             justify-content: space-between;
             margin-top: 45px;
 
+            @include SP {
+                flex-wrap: wrap;
+                margin-top: 20px;
+                justify-content: center;
+            }
+
             &__part {
                 border: 1px solid #fff;
                 padding: 30px 35px;
                 width: 100%;
                 max-width: 529px;
+
+                @include SP {
+                    padding: 8.5px 16.5px;
+                    margin-bottom: 15px;
+                    ;
+                }
 
                 &--ttl {
                     font-size: 18px;
@@ -1077,6 +1282,11 @@
                     line-height: calc(40/18);
                     color: #fff;
                     text-align: center;
+
+                    @include SP {
+                        font-size: 14px;
+                        line-height: calc(40/14)
+                    }
                 }
 
                 &--phone {
@@ -1090,6 +1300,13 @@
                     text-align: center;
                     margin: 20px 0 15px 0;
 
+                    @include SP {
+                        font-size: 28px;
+                        line-height: calc(34/28);
+                        padding-left: 0;
+                        margin: 0 0 10px;
+                    }
+
                     &:before {
                         content: "";
                         position: absolute;
@@ -1098,6 +1315,14 @@
                         height: 31.14px;
                         left: calc(50% - 190px);
                         top: 13px;
+
+                        @include SP {
+                            background-size: 21.2px 21.36px;
+                            width: 21.2px;
+                            height: 21.36px;
+                            left: calc(50% - 126px);
+                            top: 10px;
+                        }
                     }
                 }
 
@@ -1107,6 +1332,11 @@
                     line-height: calc(14/12);
                     color: #fff;
                     text-align: center;
+
+                    @include SP {
+                        font-size: 10px;
+                        line-height: calc(14/10);
+                    }
                 }
 
                 &--btn {
@@ -1119,6 +1349,11 @@
                     padding: 15px 0;
                     text-align: center;
                     cursor: pointer;
+
+                    @include SP {
+                        margin: 0 auto;
+                        padding: 5.75px 0;
+                    }
 
                     a {
                         position: relative;
@@ -1137,6 +1372,9 @@
                             right: calc(50% - 154.4px);
                             top: 11px;
 
+                            @include SP {
+                                right: calc(50% - 126.4px);
+                            }
                         }
 
                         &:hover {
@@ -1154,11 +1392,16 @@
                         top: 0;
                         left: 0;
                         transition: 0.3s all;
+
                     }
 
                     &:hover {
                         &:before {
                             width: 100%;
+
+                            @include SP {
+                                width: 0;
+                            }
                         }
                     }
                 }
@@ -1172,6 +1415,19 @@
     margin-top: -206px;
     position: relative;
     z-index: -1;
+
+    @include SP {
+        min-height: 408px;
+    }
+
+    img {
+        @include SP {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+    }
 }
 
 .scrolltop {
@@ -1183,9 +1439,17 @@
     right: 35px;
     margin: 0;
 
+    @include SP {
+        right: 16px;
+    }
+
     &:hover {
         color: #E59601;
         transition: all 0.3s;
+
+        @include SP {
+            color: #000;
+        }
     }
 
     p {
@@ -1231,19 +1495,38 @@
 #scroll {
     height: 290px;
 }
-#toggle{
+
+#toggle {
     display: none;
 }
 
-.cont{
+.cont {
     background-color: #F2F0E7;
     padding: 22px 20px;
     margin-bottom: 15px;
+
+    &:nth-child(1) {
+        order: 0
+    }
+
+    &:nth-child(2) {
+        order: 2
+    }
+
+    &:nth-child(3) {
+        order: 1
+    }
+
+    &:nth-child(4) {
+        order: 3
+    }
+
     &__ttl {
         font-size: 18px;
         font-weight: bold;
         letter-spacing: 0.1em;
         line-height: calc(28/18);
+
         >em {
             @include lato;
             display: inline-block;
@@ -1260,7 +1543,7 @@
     }
 
     &__txt {
-        margin-top: 15px;
+        margin: 15px 0;
         font-size: 14px;
         letter-spacing: 0.1em;
         line-height: calc(24/14);
@@ -1270,14 +1553,101 @@
         width: 100%;
         margin: 0 auto;
         max-width: 100%;
+
+        img {
+            width: 100%;
+        }
     }
 }
-.slick-track{
+
+.slick-track {
     display: flex;
 }
-.slick-list{
+
+.slick-list {
     width: 100%;
 }
-.slick-slide{
+
+.slick-slide {
     width: 100%;
+}
+
+.slide {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.btn-slideshow,
+.btn2-slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 37px;
+    position: relative;
+}
+
+.slick-prev {
+    position: relative;
+    order: 0;
+    transform: rotate(-45deg);
+}
+
+.slick-next {
+    position: relative;
+    order: 2;
+    transform: rotate(135deg);
+}
+
+.slick-arrow {
+    width: 14px;
+    height: 14px;
+    appearance: none;
+    box-shadow: none;
+    font-size: 0px;
+    line-height: 0;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid #E59601;
+    border-top: 2px solid #E59601;
+}
+
+.slick-disabled {
+    opacity: 0.5;
+}
+
+.slick-dots {
+    position: relative;
+    top: 18px;
+    left: -10px;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        margin: 0;
+        padding: 0 14px;
+
+        &.slick-active button {
+            border-color: #E59601;
+            background: #E59601;
+        }
+
+        button {
+            appearance: none;
+            box-shadow: none;
+            width: 18px;
+            height: 4px;
+            display: block;
+            background: #D8D8D8;
+            font-size: 0px;
+            line-height: 0;
+            letter-spacing: 0;
+            border: 1px solid #fff;
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
