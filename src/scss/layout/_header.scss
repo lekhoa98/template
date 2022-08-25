@@ -41,6 +41,10 @@
     line-height: 27px;
     padding-left: 30px;
     transition: 0.3s;
+    @include max-screen(990px){
+      font-size: 20px;
+      padding-left:24px;
+    }
 
     &:before {
       content: "";
@@ -67,6 +71,9 @@
     font-size: 10px;
     line-height: 14px;
     pointer-events: none;
+    @include max-screen(990px){
+      font-size: 8px;
+    }
   }
 
   @include max-screen(767px) {
@@ -121,10 +128,12 @@
 
     img {
       display: block;
-      width: 110.32px;
-      height: 66.65px;
+      width: 100%;
+      max-width: 110.32px;
       @include add_prefix(transition, 0.3s ease all);
-
+      @include max-screen(990px){
+        max-width: 80px;
+      }
       @include SP {
         width: 80.01px;
         height: 46.31px;
@@ -224,6 +233,10 @@
 
   .hNavi {
     margin-left: 30px;
+    @include max-screen(990px)
+    {
+      margin-left:22px;
+    }
 
     ul {
       max-width: $widthcm;
@@ -233,6 +246,9 @@
         display: inline-block;
         vertical-align: middle;
         width: auto;
+        @include max-screen(990px){
+          padding-right: 10px;
+        }
       }
     }
 
@@ -242,11 +258,24 @@
   }
 
   .gNavi {
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
     display: flex;
     justify-content: space-between;
     list-style: none;
-
+    margin-left:15px;
+    @include max-screen(1128px){
+      max-width: 570px;
+    }
+    @include max-screen(1056px){
+      max-width: 520px;
+    }
+    @include max-screen(923px){
+      max-width: 450px;
+    }
+    @include max-screen(851px){
+      max-width: 418px;
+    }
     >li {
       display: inline-block;
       vertical-align: top;
@@ -272,7 +301,12 @@
         font-weight: bold;
         position: relative;
         opacity: 1;
-
+        @include max-screen(1056px){
+          font-size: 13px;
+        }
+        @include max-screen(990px){
+          font-size:11px;
+        }
         &:before {
           content: "";
           width: 15px;
@@ -285,6 +319,12 @@
           top: 2px;
           @include add_prefix(transition, 0.3s ease all);
           transition: 0.3s;
+          @include max-screen(990px){
+            width: 12px;
+            height: 12px;
+            background: url(../img/municipality/arr.svg) center left 4px/4px 7px no-repeat;
+            left:-21px;
+          }
         }
 
         &:hover {
@@ -355,12 +395,19 @@
   content: "";
   position: relative;
   width: 104px;
-  height: 92px;
+  height: 94px;
   background: url(../img/municipality/contact_header.svg) center/92px 92px no-repeat;
   transition: 0.3s;
+  background-size: 100%;
   cursor: pointer;
   top: 15px;
-
+@include max-screen(1152px){
+  margin-left:15px;
+}
+@include max-screen(990px){
+  width: 74px;
+  height: 70px;
+}
   &:hover {
     background: url(../img/municipality/contact_header-active.svg) center/92px 92px no-repeat;
   }

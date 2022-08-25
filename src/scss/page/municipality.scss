@@ -14,6 +14,9 @@
     width: 100%;
     max-width: 100%;
     margin-top: 104px;
+    @include max-screen(990px){
+        margin-top: 82px;
+    }
 }
 
 .bg {
@@ -183,6 +186,7 @@
             z-index: 1;
             margin: 0 auto;
             width: 100%;
+            padding:0 27px;
 
             ul {
                 align-items: center;
@@ -200,7 +204,6 @@
 
                     &.btn {
                         width: 100%;
-                        max-width: 190px;
                         margin-bottom: 15px;
                         background-color: #000;
                         position: relative;
@@ -482,7 +485,7 @@
                             width: 82px;
                             position: absolute;
                             top: -42px;
-                            right: calc(100% - 270px);
+                            right: calc(50% - 41px);
 
                             @include SP {
                                 width: 58px;

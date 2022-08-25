@@ -1,15 +1,10 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) session_start();
-header("Cache-control: public");
-ob_start();
 include_once(dirname(__DIR__) . '/app_config.php');
-$thisPageName = 'municipality';
+//$thisPageName = 'municipality';
 include(APP_PATH . 'libs/head.php');
 ?>
 <meta http-equiv="expires" content="86400">
-<meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/municipality.min.css">
-<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/form/validationEngine.jquery.css">
 </head>
 
 <body>

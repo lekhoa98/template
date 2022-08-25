@@ -15,13 +15,12 @@
   $current_url = $globalCanonical = 'http' . (!empty($_SERVER['HTTPS']) ? 's' : '') . '://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
   include(APP_PATH . 'libs/argument.php');
   include(APP_PATH . 'libs/functions.php'); ?>
-
   <link rel="canonical" href="<?php echo $thisCanonical ?>">
   <script src="<?php echo APP_ASSETS ?>js/ipad.min.js"></script>
   <script>
     if (isIpad()) document.querySelectorAll('meta[name="viewport"]')[0].setAttribute("content", "width=1024, shrink-to-fit=no");
   </script>
-
+  
   <title><?php echo $titlepage ?></title>
   <meta name="description" content="<?php echo $desPage; ?>">
   <meta name="keywords" content="<?php echo $keyPage; ?>">

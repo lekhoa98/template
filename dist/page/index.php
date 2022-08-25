@@ -1,5 +1,5 @@
 <?php
-$thisPageName = 'page';
+$thisPageName = 'page'; 
 include_once(dirname(__DIR__) . '/app_config.php');
 include(APP_PATH . 'libs/head.php');
 ?>
