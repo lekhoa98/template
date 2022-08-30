@@ -12,5 +12,4 @@
 // include_once( dirname(__FILE__) . "/post-type/recruit.php" );
 // include_once( dirname(__FILE__) . "/post-type/salon.php" );
 // include_once( dirname(__FILE__) . "/post-type/staff.php" );
-
-include_once(dirname(__FILE__) . "/functions-custom.php");
+// include_once( dirname(__FILE__) . "/post-type/style.php" );
