@@ -1,0 +1,169 @@
+@charset 'UTF-8';
+@import '../utility/*';
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 104px;
+    @include max-screen(990px){
+        margin-top: 82px;
+    }
+}
+
+.bg {
+    background: url(../../img/municipality/bg-main.jpg);
+    background-size: cover;
+
+    .title {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 216px;
+        margin: 0 auto;
+        background-color: #E59601;
+        opacity: 0.9;
+        @include font(38,calc(52/38),0.1em,bold);
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.breadcrumb {
+    width: 100%;
+    margin: 11px auto;
+    max-width: 1197px;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        color: #A0A0A0;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+
+        li {
+            a {
+                position: relative;
+                color: #A0A0A0;
+                padding-right: 24px;
+                text-decoration: underline;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border-top: 1px solid #A0A0A0;
+                    border-right: 1px solid #A0A0A0;
+                    transform: rotate(45deg);
+                    width: 4px;
+                    height: 4px;
+                    top: 7.5px;
+                    right: 11px;
+                }
+            }
+        }
+    }
+}
+.section{
+    margin-top:83px;
+    width:100%;
+}
+.firstBlock{
+    .txt{
+        text-align: center;
+        @include font(18,calc(44/18),0.1em,400);
+    }
+    &__inside{
+        margin: 79px auto;
+        max-width: 1089px;
+        display: flex;
+        justify-content: space-between;
+
+        .bg-btn{
+            width: 100%;
+            max-width: 540px;
+            &:nth-child(1){
+                background-image: url(../../img/life-style/bg-btn1.png);
+            }
+            background-size: cover;
+            padding: 45px 37px;
+            &:nth-child(2){
+                background-image: url(../../img/life-style/bg-btn2.png);
+            }
+            &__ttl{
+                text-align: center;
+                @include font(26,calc(34/26),0.1em,bold);
+                color: #fff;
+                span{
+                    @include font(14,calc(34/14),0.1em,bold);
+                }
+            }
+            .grBtn{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top:32px;
+                a{
+                    position:relative;
+                    width: 100%;
+                    max-width: 222px;
+                    background: #000;
+                    @include font(16,calc(34/16),0.1em,bold);
+                    color:#fff;
+                    text-align: center;
+                    padding: 15px 0 15px 0;
+                    transition: all 0.3s;
+                    &:before{
+                        content:"";
+                        position: absolute;
+                        width: 9px;
+                        height: 9px;
+                        border-top: 1px solid #fff;
+                        border-left: 1px solid #fff;
+                        transform: rotate(-135deg);
+                        top: calc(50% - 7px);
+                        right:15px;
+                        transition: all 0.3s;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        color:#000;
+                        opacity: 1;
+                        &:before{
+                            border-top: 1px solid #000;
+                        border-left: 1px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bgContent{
+    width: 100%;
+    margin-top:50px;
+    background: url(../../img/life-style/bg-sect1.png);
+    background-size: cover;
+    padding-top:199px;
+    padding-bottom: 206px;
+    &__ttl{
+        color:#fff;
+        text-align: center;
+        line-height: 3.5;
+        h2{
+            @include font(40,calc(34/40),0.1em,bold);
+        }
+        span{
+            @include font(18,calc(34/18),0.1em,bold);
+        }
+    }
+    &__txt{
+        @include font(16,calc(34/16),0.1em,400);
+        text-align: center;
+        color:#fff;
+        margin-top:52px;
+    }
+}
