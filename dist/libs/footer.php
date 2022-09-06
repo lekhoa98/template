@@ -1,3 +1,34 @@
+<div class="contactbox">
+            <div class="outside">
+                <p class="ttl">お問い合わせ</p>
+                <p class="txt">製品に関するご質問など、<br c;ass="sp">お気軽にお問い合わせください。</p>
+                <div class="box-inside">
+                    <div class="box-inside__part">
+                        <p class="box-inside__part--ttl">
+                            お電話からのお問い合わせ
+                        </p>
+                        <p class="box-inside__part--phone">
+                            050-3554-6370
+                        </p>
+                        <p class="box-inside__part--txt">
+                            月～土 9:00～17:00（休：第２第４土,日,祝）
+                        </p>
+                    </div>
+                    <div class="box-inside__part">
+                        <p class="box-inside__part--ttl">
+                            Webからのお問い合わせ
+                        </p>
+                        <div class="box-inside__part--btn">
+                            <a>お問い合わせフォーム</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="before-footer">
+            <img src="<?php echo APP_ASSETS; ?>img/municipality/bg-bffooter.jpg" alt="">
+</div>
+
 <footer class="footer">
     <div class="inFooter">
         <div class="inFooter__left ">
