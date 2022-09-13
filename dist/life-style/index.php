@@ -53,13 +53,88 @@ include(APP_PATH . 'libs/head.php');
                         <h2>ロマンのある暮らし</h2>
                     </div>
                     <div class="bgContent__txt">
-                    キャンプ・釣り・サイクリング・ハイキング・サーフィン・ラフティングなど、<br>
-                    GL BASEとハイエースはアウトドアに持ってこいの組み合わせ。<br>
-                    耐久性も申し分なく、どこへ遊びにいくにも役立つ“秘密基地”になってくれるでしょう。
+                        キャンプ・釣り・サイクリング・ハイキング・サーフィン・ラフティングなど、<br>
+                        GL BASEとハイエースはアウトドアに持ってこいの組み合わせ。<br>
+                        耐久性も申し分なく、どこへ遊びにいくにも役立つ“秘密基地”になってくれるでしょう。
                     </div>
                 </div>
                 <div class="content content--01">
-                
+                    <div class="wcm-content">
+                        <div class="wcm-content__inside">
+                            <div class="wcm-content__inside--ttl">
+                                キャンプライフ<br>
+                                自由で快適な
+                            </div>
+                            <div class="wcm-content__inside--txt">
+                                カンカンカン…<br>
+                                ペグを打ち付ける音が心地よく鳴り響く。<br><br>
+                                腰を上げてふと目線を上にやると<br>
+                                青々とした樹々が僕たちをのぞき込んでいる。<br><br>
+                                パシャッ！<br>
+                                何だ？<br>
+                                水鉄砲を持った子どもたちがこちらを見て笑っている。<br><br>
+                                「さあ、そろそろ火を起こすから見にくるか？」<br><br>
+                                車には、道の駅で買い出しした野菜たちを手に取り<br>
+                                ニンマリとする妻の姿。<br><br><br>
+                                キャンプはいつだって楽しい。<br><br>
+                                でもGL BASEがあれば<br>
+                                もっと楽しく、もっと快適になる。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wcm">
+                    <div class="content-Org">
+                        <h4 class="content-Org__heading">
+                            GL BASEでキャンプがこんなに快適に
+                        </h4>
+                        <ul class="content-Org__txt">
+                            <li>かさばる道具の数々も、ハイエースなら荷室に積み込みラクラク。</li>
+                            <li>テントを張りにくい現場でも拠点をつくれる。</li>
+                            <li>車内に簡易トイレを設置できるから、家族連れでも安心。</li>
+                            <li>シートを倒せばテーブルが出現し、食卓にもなる。</li>
+                            <li>フルフラットモードにすれば車内で宿泊可能。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content content--02">
+                    <div class="wcm-content">
+                        <div class="wcm-content__inside">
+                            <div class="wcm-content__inside--ttl">
+                                キャンプライフ<br>
+                                自由で快適な
+                            </div>
+                            <div class="wcm-content__inside--txt">
+                                カンカンカン…<br>
+                                ペグを打ち付ける音が心地よく鳴り響く。<br><br>
+                                腰を上げてふと目線を上にやると<br>
+                                青々とした樹々が僕たちをのぞき込んでいる。<br><br>
+                                パシャッ！<br>
+                                何だ？<br>
+                                水鉄砲を持った子どもたちがこちらを見て笑っている。<br><br>
+                                「さあ、そろそろ火を起こすから見にくるか？」<br><br>
+                                車には、道の駅で買い出しした野菜たちを手に取り<br>
+                                ニンマリとする妻の姿。<br><br><br>
+                                キャンプはいつだって楽しい。<br><br>
+                                でもGL BASEがあれば<br>
+                                もっと楽しく、もっと快適になる。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wcm">
+                    <div class="content-Org">
+                        <h4 class="content-Org__heading">
+                            GL BASEでキャンプがこんなに快適に
+                        </h4>
+                        <ul class="content-Org__txt">
+                            <li>かさばる道具の数々も、ハイエースなら荷室に積み込みラクラク。</li>
+                            <li>テントを張りにくい現場でも拠点をつくれる。</li>
+                            <li>車内に簡易トイレを設置できるから、家族連れでも安心。</li>
+                            <li>シートを倒せばテーブルが出現し、食卓にもなる。</li>
+                            <li>フルフラットモードにすれば車内で宿泊可能。</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
