@@ -86,7 +86,7 @@ include(APP_PATH . 'libs/head.php');
                 <div class="wcm">
                     <div class="content-Org">
                         <h4 class="content-Org__heading">
-                            GL BASEでキャンプがこんなに快適に
+                            GL BASEで<br class="sp">キャンプがこんなに快適に
                         </h4>
                         <ul class="content-Org__txt">
                             <li>かさばる道具の数々も、ハイエースなら荷室に積み込みラクラク。</li>
@@ -126,7 +126,7 @@ include(APP_PATH . 'libs/head.php');
                 <div class="wcm">
                     <div class="content-Org">
                         <h4 class="content-Org__heading">
-                            GL BASEで釣りがもっとおもしろく
+                            GL BASEで<br class="sp">釣りがもっとおもしろく
                         </h4>
                         <ul class="content-Org__txt">
                             <li>竿の積み込みが楽</li>
@@ -141,7 +141,7 @@ include(APP_PATH . 'libs/head.php');
                 <div class="bgContent">
                     <div class="bgContent__ttl">
                         <span>じっくり落ち着く時間も大切にしたい</span><br>
-                        <h2>自分の空間がある暮らし</h2>
+                        <h2>自分の空間が<br class="sp">ある暮らし</h2>
                     </div>
                     <div class="bgContent__txt">
                         デスクワークにも読書にも、気分を変えて集中したいときの書斎として。<br>
@@ -183,7 +183,7 @@ include(APP_PATH . 'libs/head.php');
                 <div class="wcm">
                     <div class="content-Org">
                         <h4 class="content-Org__heading">
-                            仕事がはかどる自分だけの空間
+                            仕事がはかどる<br class="sp">自分だけの空間
                         </h4>
                         <ul class="content-Org__txt">
                             <li>自家用車がデスクに。玄関を出て数秒でワークスペースに入室完了。</li>

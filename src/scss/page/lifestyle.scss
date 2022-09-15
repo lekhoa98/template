@@ -4,6 +4,11 @@
 body{
     overflow-x: hidden;
 }
+@include PC{
+    .sp{
+        display: none;
+    }
+}
 .container {
     width: 100%;
     max-width: 100%;
@@ -11,6 +16,9 @@ body{
     overflow: hidden;
     @include max-screen(990px){
         margin-top: 82px;
+    }
+    @include SP{
+        margin-top:70px;
     }
 }
 
@@ -31,6 +39,10 @@ body{
         @include font(38,calc(52/38),0.1em,bold);
         span {
             color: #fff;
+        }
+        @include SP{
+            @include font(26,calc(52/25),0.1em,bold);
+            height: 110px;
         }
     }
 }
@@ -70,39 +82,67 @@ body{
             }
         }
     }
+    @include SP{
+        padding: 0 20px;
+    }
 }
 .section{
     margin-top:83px;
     width:100%;
+    @include SP{
+        margin-top:43px;
+    }
 }
 .firstBlock{
     .txt{
         text-align: center;
         @include font(18,calc(44/18),0.1em,400);
+        @include SP{
+            text-align: justify;
+            @include font(16,calc(36/16),0.1em,400);
+            padding: 0 20px
+        }
     }
     &__inside{
         margin: 79px auto;
         max-width: 1089px;
         display: flex;
         justify-content: space-between;
-
+        @include SP{
+            flex-wrap: wrap;
+            margin: 10px auto;
+            padding: 0 20px;
+        }
         .bg-btn{
             width: 100%;
             max-width: 540px;
             &:nth-child(1){
                 background-image: url(../../img/life-style/bg-btn1.png);
+                background-size: cover;
             }
             background-size: cover;
             padding: 45px 37px;
+            @include SP{
+                padding: 32px 21px 37px;
+                margin-top:20px;
+                max-width: 100%;;
+            }
             &:nth-child(2){
                 background-image: url(../../img/life-style/bg-btn2.png);
+                background-size: cover;
             }
             &__ttl{
                 text-align: center;
                 @include font(26,calc(34/26),0.1em,bold);
                 color: #fff;
+                @include SP{
+                    @include font(24,calc(34/24),0.1em,bold);
+                }
                 span{
                     @include font(14,calc(34/14),0.1em,bold);
+                    @include SP{
+                        @include font(16,calc(34/16),0.1em,bold);
+                    }
                 }
             }
             .grBtn{
@@ -110,6 +150,10 @@ body{
                 display: flex;
                 justify-content: space-between;
                 margin-top:32px;
+                @include SP{
+                    flex-wrap: wrap;
+                    margin-top: 15px;
+                }
                 a{
                     position:relative;
                     width: 100%;
@@ -120,6 +164,12 @@ body{
                     text-align: center;
                     padding: 15px 0 15px 0;
                     transition: all 0.3s;
+                    @include SP{
+                        margin: 0 auto;
+                        max-width: 295px;
+                        padding:12px 0;
+                        margin-top:10px;
+                    }
                     &:before{
                         content:"";
                         position: absolute;
@@ -131,6 +181,9 @@ body{
                         top: calc(50% - 7px);
                         right:15px;
                         transition: all 0.3s;
+                        @include SP{
+                            right:23px;
+                        }
                     }
                     &:hover{
                         background-color: #fff;
@@ -153,13 +206,23 @@ body{
     background-size: cover;
     padding-top:199px;
     padding-bottom: 206px;
+    @include SP{
+        padding:104px 20px 161px;
+    }
     &:nth-child(3){
         margin-top:121px;
+        @include SP{
+            margin-top:83px;
+        }
     }
     &:nth-child(8){
         margin-top:73px;
         background: url(../../img/life-style/bg-sect2.png);
         background-size: cover;
+        @include SP{
+            margin-top:111px;
+            padding: 69px 20px 161px;
+        }
     }
     &__ttl{
         color:#fff;
@@ -167,9 +230,15 @@ body{
         line-height: 3.5;
         h2{
             @include font(40,calc(34/40),0.1em,bold);
+            @include SP{
+                @include font(30,calc(34/30),0.1em,bold);
+            }
         }
         span{
             @include font(18,calc(34/18),0.1em,bold);
+            @include SP{
+                @include font(16,calc(34/16),0.1em,bold);
+            }
         }
     }
     &__txt{
@@ -177,6 +246,11 @@ body{
         text-align: center;
         color:#fff;
         margin-top:52px;
+        @include SP{
+            text-align: left;
+            @include font(15,calc(30/15),0.1em,400);
+            margin-top:40px;
+        }
     }
 }
 .content{
@@ -186,6 +260,9 @@ body{
     padding-top: 92px;
     padding-bottom: 310px;
     position: relative;
+    @include SP{
+        padding-top:30px;
+    }
     &:nth-child(4){
         .wcm-content{
             &__inside{
@@ -198,6 +275,12 @@ body{
                     background-size: cover;
                     right: -518px;
                     top:-196px;
+                    @include SP{
+                        width: 303px;
+                        height: 364px;
+                        right: -70px;
+                        top:-86px
+                    }
                 }
             }
             &:after{
@@ -210,6 +293,12 @@ body{
                 bottom: 148px;
                 right: calc(100% - 373px);
                 z-index: 1;
+                @include SP{
+                    width: 199px;
+                    height: 190px;
+                    right: 195px;
+                    bottom: 188px;
+                }
             }
         }
     }
@@ -225,6 +314,12 @@ body{
                     background-size: cover;
                     right: -538px;
                     top:-173px;
+                    @include SP{
+                        width: 303px;
+                        height: 379px;
+                        top: -68px;
+                        right: -73px;
+                    }
                 }
             }
             &:after{
@@ -237,10 +332,17 @@ body{
                 bottom: 103px;
                 right: calc(100% - 390px);
                 z-index: 1;
+                @include SP{
+                    width: 177px;
+                    height: 176px;
+                    right:calc(100% - 168px);
+                    bottom: 215px;
+                }
             }
         }
     }
     &:nth-child(9){
+        padding-bottom:281px;
         .wcm-content{
             &__inside{
                 &:before{
@@ -252,6 +354,12 @@ body{
                     background-size: cover;
                     right: -502px;
                     top:-134px;
+                    @include SP{
+                        width: 302px;
+                        height: 432px;
+                        right:-84px;
+                        top:-111px;
+                    }
                 }
                 &:after{
                     content: "";
@@ -274,6 +382,12 @@ body{
                 bottom: 120px;
                 right: calc(100% - 358px);
                 z-index: 1;
+                @include SP{
+                    width: 199px;
+                    height: 234px;
+                    right:calc(100% - 116px);
+                    bottom:109px;
+                }
             }
         }
     }
@@ -290,6 +404,12 @@ body{
                     background-size: cover;
                     right: -402px;
                     top:-113px;
+                    @include SP{
+                        width: 290px;
+                        height: 242px;
+                        right: -75px;
+                        top:-88px
+                    }
                 }
             }
         }
@@ -304,16 +424,29 @@ body{
         padding:0 20px;
         width: calc(80% - 4px);
         max-width: 990px;
+        @include SP{
+            flex-wrap: wrap;
+            width: 100%;
+        }
         &--ttl{
             @include font(63,1.5,0.1em,900);
             writing-mode: vertical-lr;
             margin:0 auto;
+            @include SP{
+                @include font(36,1.5,0.1em,900);
+                margin:0;
+                padding-left:3px;
+            }
         }
         &--txt{
             @include font(18,calc(36/18),0.1em,400);
             padding-left:20px;
             padding-top:72px;
             width: 554px;
+            @include SP{
+                @include font(15,calc(28/15),0.1em,400);
+                padding: 34px 6px 81px 0;
+            }
         }
     }
 }
@@ -324,6 +457,10 @@ body{
     margin-top:-186px;
     padding:0 20px;
     height: 527px;
+    @include SP{
+        margin-top: -124px;
+        margin-bottom:60px;
+    }
     &:nth-child(7){
         margin-top:-170px;
         .content-Org{
@@ -333,6 +470,13 @@ body{
                 height: 437px;
                 top:-212px;
                 left:calc(100% - 184px);
+                @include SP{
+                    width: 180px;
+                    height: 199px;
+                    background-size: cover;
+                    top:-216px;
+                    left: calc(100% - 124px);
+                }
             }
         }
     }
@@ -344,12 +488,23 @@ body{
                     height: 365px;
                     top:-262px;
                     left:calc(100% - 139px);
+                    @include SP{
+                        background-size: cover;
+                        width: 161px;
+                        height: 161px;
+                        left: calc(100% - 82px);
+                        top: -240px;
+                    }
             }
         }
     }
     &:nth-child(12){
         margin-top:-194px;
         height:467px;
+        @include SP{
+            margin-top: -288px;
+            margin-bottom: 0;
+        }
         .content-Org{
             &:before{
                 background: url(../../img/life-style/circle12.png);
@@ -357,6 +512,13 @@ body{
                     height: 497px;
                     top:-433px;
                     left:calc(100% - 271px);
+                    @include SP{
+                        background-size: cover;
+                        width: 170px;
+                        height: 170px;
+                        top:-213px;
+                        left: calc(100% - 111px);
+                    }
             }
         }
     }
@@ -367,6 +529,9 @@ body{
         border: 12px solid #E59601;
         margin:0 auto;
         background-color: #fff;
+        @include SP{
+            border: 8px solid #E59601;
+        }
         &__heading{
             display: flex;
             align-items: center;
@@ -380,18 +545,34 @@ body{
             color:#fff;
             @include font(24,calc(32/24),0.1em,bold);
             top:-62px;
-            right:calc(50% - 286px)
+            right:calc(50% - 286px);
+            @include SP{
+                @include font(18,calc(28/18),0.1em,bold);
+                background: url(../../img/life-style/bg-or-sp.png);
+                width: 323.98px;
+                height: 120.46px;
+                right:calc(50% - 162px);
+                top:-85px;
+                text-align: center;
+            }
         }
         &__txt{
             list-style:none;
             max-width: 892px;
             margin:0 auto;
             padding: 52px 0;
+            @include SP{
+                padding: 41px 17px;
+            }
             li{
                 @include font(18,calc(32/18),0.08em,400);
                 border-bottom: 1px solid #D8D8D8;
                 padding: 13px 0 11px 38px;
                 position: relative;
+                @include SP{
+                    @include font(14,calc(26/14),0.08em,400);
+                    padding: 13px 0 13px 24px;
+                }
                 &:before{
                     content: "";
                     position: absolute;
@@ -401,6 +582,10 @@ body{
                     background-size: cover;
                     left:0;
                     top:17px;
+                    @include SP{
+                        width: 20.28px;
+                        height: 18.26px;
+                    }
                 }
             }
         }
@@ -414,6 +599,12 @@ body{
             top: -438px;
             left: calc(100% - 166px);
             z-index: 1;
+            @include SP{
+                width: 200px;
+                height: 331px;
+                top:-376px;
+                left: calc(100% - 114px);
+            }
         }
     }
     &:after{
@@ -431,11 +622,20 @@ body{
     background: url(../../img/life-style/bg-tree.svg);
     background-size: cover;
     padding: 0 20px 169px;
+    @include SP{
+        padding: 0 20px 133px;
+    }
     &__btn{
         display: flex;
         margin:0 auto;
         max-width: 575px;
         justify-content: space-between;
+        @include SP{
+            flex-wrap: wrap;
+            max-width: 100%;
+            position: relative;
+            margin-top:-18px;
+        }
         &--custom{
             position: relative;
             width: 100%;
@@ -445,6 +645,11 @@ body{
             @include font(16,calc(32/16),0.1em,bold);
             padding:33px 0 35px 25px;
             background-color: #fff; 
+            @include SP{
+                max-width: 335px;
+                padding: 21px 0 21px 29px;
+                margin-top: 19px;
+            }
             &:after{
                 content: "";
                 position: absolute;
@@ -467,6 +672,9 @@ body{
         max-width: 1089px;
         margin: 0 auto;
         justify-content: space-between;
+        @include SP{
+            flex-wrap: wrap;
+        }
         &__content{
             width: 100%;
             max-width: 544px;
@@ -484,6 +692,9 @@ body{
                 @include font(18,calc(34/18),0.1em,bold);
                 color: #fff;
                 text-align: center;
+                @include SP{
+                    @include font(16,calc(28/16),0.1em,bold);
+                }
             }
             &--btn{
                 position: relative;
@@ -505,6 +716,9 @@ body{
                     width: 20px;
                     right:-1px;
                     top:calc(50% - 1px);
+                }
+                @include SP{
+                    @include font(14,calc(34/14),0.1em,bold);
                 }
             }
         }
