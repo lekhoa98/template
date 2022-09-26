@@ -1,5 +1,21 @@
 <?php
 include_once(dirname(__DIR__) . '/app_config.php');
+include_once(dirname(__DIR__) . '/wp/wp-load.php');
+$faq = new WP_Query(array(
+    'post_type' => 'faq',
+    'post_status' => 'publish',
+    'orderby'         =>'menu_order',
+    'order'           =>'ASC',
+    'showposts'       => -1,
+    // 'tax_query' => array(
+    //     array(
+    //       'taxonomy' => 'faqcat',
+    //       'field'    => 'slug',
+    //       'terms'    =>  'municipality',
+    //     )
+    //   ),
+    )
+    );
 //$thisPageName = 'municipality';
 include(APP_PATH . 'libs/head.php');
 ?>
@@ -496,29 +512,33 @@ include(APP_PATH . 'libs/head.php');
                         </div>
                     </div>
                 </div>
+                <?php if($faq->have_posts()): ?>
                 <div class="item item--05">
                     <h2 class="item__ttl">
                         よくあるご質問
                     </h2>
                     <div class="item__inside">
-                        <div id="qa" class="qa">
+                    <?php while ($faq->have_posts()) : $faq->the_post();
+                        if($post->post_content !=''){
+                            ?>
+                        <div class="qa">
                             <p class="ques">
-                                質問タイトルどうして国が代わってローンを返済してもらえるのですか？
+                                <?php echo get_the_title($post->ID); ?>
                             </p>
                             <div class="btn-dropdown">
-                                <button id="dropdown" class="dropdown">
+                                <button class="dropdown">
                                     <span></span>
                                     <span class="test"></span>
                                 </button>
                             </div>
-                            <div id="ans" class="ans">
-                                回答が入りますＪＴＩが対象住宅を借り上げ転貸し、転借人による賃料を住宅金融支援機構が直接受領することでお客様の返済に充てるという内容の返済なので、
-                                国が変わってローンを返済するわけではありません。なお、ＪＴＩからの賃料の支払いは最初の転借人が入居した時点から始まりますので、
-                                転借人が決まらない間は家賃による返済ができず、債務者自身による返済が必要となりますので延滞しないようにする注意が必要です。<a>リンクを貼ることもできます。</a>
+                            <div class="ans">
+                                <?php echo get_the_content($post->ID); ?>
                             </div>
                         </div>
+                        <?php } endwhile; ?>
                     </div>
                 </div>
+                <?php endif;  wp_reset_postdata();?>
             </div>
         </div>
         </div>
@@ -554,18 +574,14 @@ include(APP_PATH . 'libs/head.php');
             }
         });
     });
-    $("#dropdown").click(function() {
-        $("#ans").slideDown("fast", function() {
-            $(".dropdown").toggleClass("active");
-            if ($(".dropdown").hasClass("active")) {
-                $("#ans").css("display", "block");
+    $(".dropdown").click(function() {
+            $(this).toggleClass("active");
+            if (($(this).hasClass("active"))===true) {
+                $(this).parent().next().slideDown();
             } else {
-                $("#ans").slideUp("fast", function() {
-                    $("#ans").css("display", "none");
-                });
+                $(this).parent().next().slideUp();
             }
-        })
-    });
+        });
     $(window).scroll(function() {
         var aTop = $('#scroll').height();
         if ($(this).scrollTop() >= aTop) {

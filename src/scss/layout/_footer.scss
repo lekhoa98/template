@@ -203,10 +203,12 @@ body{
         margin-right:32px;
       }
       @include SP {
-        width: 100%;
-        max-width: 100%;
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
         display: block;
         margin-top: 40px;
+        position: relative;
+        left: -20px;
       }
 
       .menu-footer {
@@ -219,6 +221,7 @@ body{
         @include SP {
           font-size: 0;
           margin: 0;
+          max-width: 100%;
 
           &:nth-of-type(1) {
             li {
@@ -331,6 +334,7 @@ body{
         margin: 0 auto;
         position: relative;
         max-width: 110px;
+        right:0;
         ;
       }
 
@@ -385,12 +389,13 @@ body{
   width: 100%;
 
   .outside {
-      width: 100%;
-      max-width: 1270px;
+      width: calc(100% - 65px);
       margin: 0 auto;
       background-color: #E59601;
       padding: 60px 90px;
-
+      @include max-screen(1024px){
+        width: calc(100% - 35px);
+      } 
       @include SP {
           width: calc(100% - 40px);
           padding: 20px 24px;
@@ -439,13 +444,12 @@ body{
           &__part {
               border: 1px solid #fff;
               padding: 30px 35px;
-              width: 100%;
-              max-width: 529px;
+              width: calc(50% - 16px);
 
               @include SP {
                   padding: 8.5px 16.5px;
                   margin-bottom: 15px;
-                  ;
+                  width: 100%;
               }
 
               &--ttl {
@@ -472,7 +476,9 @@ body{
                   padding-left: 30px;
                   text-align: center;
                   margin: 20px 0 15px 0;
-
+                  @include screen(1024px,1133px){
+                    font-size: 36px;
+                  }
                   @include SP {
                       font-size: 28px;
                       line-height: calc(34/28);
@@ -513,7 +519,7 @@ body{
               }
 
               &--btn {
-                  width: 100%;
+                  width: calc(100% - 12px);
                   max-width: 310px;
                   margin: 20px auto;
                   background-color: #000;
@@ -524,11 +530,12 @@ body{
                   cursor: pointer;
 
                   @include SP {
-                      margin: 0 auto;
+                      margin: 15px auto 0;
                       padding: 5.75px 0;
                   }
 
                   a {
+                      display:block;
                       position: relative;
                       color: #fff;
                       mix-blend-mode: difference;
@@ -542,12 +549,8 @@ body{
                           position: absolute;
                           border-top: 1px solid #fff;
                           width: 20px;
-                          right: calc(50% - 154.4px);
-                          top: 11px;
-
-                          @include SP {
-                              right: calc(50% - 126.4px);
-                          }
+                          right: 0;
+                          top: calc(50% - 1px);
                       }
 
                       &:hover {

@@ -1,11 +1,11 @@
 handleGoogleFontLoader();
 $(function () {
   // DOCUMENT READY
-  gNaviHover();
+  // gNaviHover();
 });
-$("#hamburger").click(function(){
-  $(".hamburger").toggleClass("active");
-  if($(".hamburger").hasClass("active"))
+$(".hamburger").click(function(){
+  $(this).toggleClass("active");
+  if($(this).hasClass("active")===true)
   {
     $("#contact").addClass("hidden");
     $("#menu").fadeIn();

@@ -105,7 +105,8 @@ body{
     }
     &__inside{
         margin: 79px auto;
-        max-width: 1089px;
+        max-width: 1129px;
+        padding: 0 20px;
         display: flex;
         justify-content: space-between;
         @include SP{
@@ -115,7 +116,7 @@ body{
         }
         .bg-btn{
             width: 100%;
-            max-width: 540px;
+            max-width: calc(50% - 4px);
             &:nth-child(1){
                 background-image: url(../../img/life-style/bg-btn1.png);
                 background-size: cover;
@@ -157,7 +158,7 @@ body{
                 a{
                     position:relative;
                     width: 100%;
-                    max-width: 222px;
+                    max-width: calc(50% - 8.5px);
                     background: #000;
                     @include font(16,calc(34/16),0.1em,bold);
                     color:#fff;
@@ -169,6 +170,9 @@ body{
                         max-width: 295px;
                         padding:12px 0;
                         margin-top:10px;
+                    }
+                    @include max-screen(1024px){
+                        padding:8px 0;
                     }
                     &:before{
                         content:"";
@@ -293,6 +297,14 @@ body{
                 bottom: 148px;
                 right: calc(100% - 373px);
                 z-index: 1;
+                @include max-screen(1215px){
+                    right: calc(100% - 269px);
+                }
+                @include max-screen(1024px){
+                    width: 326px;
+                    height: 311px;
+                    right: calc(100% - 215px)
+                }
                 @include SP{
                     width: 199px;
                     height: 190px;
@@ -326,12 +338,22 @@ body{
                 content: "";
                 position: absolute;
                 background: url(../../img/life-style/cricle6.png);
-                width: 440px;
-                height: 440px;
+                width: 100%;
+                height: 100%;
                 background-size: cover;
                 bottom: 103px;
                 right: calc(100% - 390px);
                 z-index: 1;
+                @include max-screen(1215px){
+                    width: 380px;
+                    height: 380px;
+                    right:calc(100% - 323px);
+                }
+                @include screen(768px,1024px){
+                    width: 310px;
+                    height: 310px;
+                    right:calc(100% - 223px);
+                }
                 @include SP{
                     width: 177px;
                     height: 176px;
@@ -466,7 +488,7 @@ body{
         .content-Org{
             &:before{
                 background: url(../../img/life-style/circle5.png);
-                width: 375px;
+                width: 393px;
                 height: 437px;
                 top:-212px;
                 left:calc(100% - 184px);
@@ -646,9 +668,9 @@ body{
             padding:33px 0 35px 25px;
             background-color: #fff; 
             @include SP{
-                max-width: 335px;
+                max-width: 375px;
                 padding: 21px 0 21px 29px;
-                margin-top: 19px;
+                margin: 19px auto 0;
             }
             &:after{
                 content: "";
@@ -680,6 +702,11 @@ body{
             max-width: 544px;
             padding-top:58px;
             padding-bottom: 51px;
+            @include SP{
+                padding-top:32px;
+                padding-bottom: 32px;
+                max-width: 100%;
+            }
             &:nth-child(1){
                 background: url(../../img/life-style/bg-btn3.png);
                 background-size: cover;
@@ -687,6 +714,9 @@ body{
             &:nth-child(2){
                 background: url(../../img/life-style/bg-btn4.png);
                 background-size: cover;
+                @include SP{
+                    margin-top:2px;
+                }
             }
             &--ttl{
                 @include font(18,calc(34/18),0.1em,bold);
@@ -719,6 +749,9 @@ body{
                 }
                 @include SP{
                     @include font(14,calc(34/14),0.1em,bold);
+                    max-width: 192px;
+                    margin-top:9px; 
+                    padding:3px 0;
                 }
             }
         }

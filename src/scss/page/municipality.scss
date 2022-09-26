@@ -98,7 +98,7 @@
             border: 1px solid #000;
             list-style-type: none;
             padding: 0;
-            max-width: 335px;
+            width: calc(100% - 40px);
             margin: 0 auto;
 
             .ttl {
@@ -306,10 +306,10 @@
 
             &__inside {
                 width: 100%;
-                max-width: 967px;
+                max-width: 987px;
                 position: relative;
                 margin: 0 auto;
-
+                padding-right:20px;
                 @include SP {
                     padding: 0 20px;
                 }
@@ -1122,7 +1122,9 @@
                                 line-height: calc(24/14);
                                 padding: 20px;
                             }
-
+                            @include max-screen(1024px){
+                                padding:10px;
+                            }
                             @include SP {
                                 width: 100%;
                             }
@@ -1131,7 +1133,7 @@
                         .entry-img {
                             width: 43%;
                             max-width: 319px;
-
+                            margin-left: 10px;
                             @include SP {
                                 width: 100%;
                                 max-width: 100%;
