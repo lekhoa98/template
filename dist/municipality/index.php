@@ -7,16 +7,8 @@ $faq = new WP_Query(array(
     'orderby'         =>'menu_order',
     'order'           =>'ASC',
     'showposts'       => -1,
-    // 'tax_query' => array(
-    //     array(
-    //       'taxonomy' => 'faqcat',
-    //       'field'    => 'slug',
-    //       'terms'    =>  'municipality',
-    //     )
-    //   ),
     )
-    );
-//$thisPageName = 'municipality';
+);
 include(APP_PATH . 'libs/head.php');
 ?>
 <meta http-equiv="expires" content="86400">
@@ -518,7 +510,7 @@ include(APP_PATH . 'libs/head.php');
                         よくあるご質問
                     </h2>
                     <div class="item__inside">
-                    <?php while ($faq->have_posts()) : $faq->the_post();
+                        <?php while ($faq->have_posts()) : $faq->the_post();
                         if($post->post_content !=''){
                             ?>
                         <div class="qa">
@@ -575,13 +567,13 @@ include(APP_PATH . 'libs/head.php');
         });
     });
     $(".dropdown").click(function() {
-            $(this).toggleClass("active");
-            if (($(this).hasClass("active"))===true) {
-                $(this).parent().next().slideDown();
-            } else {
-                $(this).parent().next().slideUp();
-            }
-        });
+        $(this).toggleClass("active");
+        if (($(this).hasClass("active")) === true) {
+            $(this).parent().next().slideDown();
+        } else {
+            $(this).parent().next().slideUp();
+        }
+    });
     $(window).scroll(function() {
         var aTop = $('#scroll').height();
         if ($(this).scrollTop() >= aTop) {
