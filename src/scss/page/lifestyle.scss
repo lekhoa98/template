@@ -34,8 +34,7 @@ body{
         width: 100%;
         height: 216px;
         margin: 0 auto;
-        background-color: #E59601;
-        opacity: 0.9;
+        background-color: rgb(255, 155, 20, 0.8);
         @include font(38,calc(52/38),0.1em,bold);
         span {
             color: #fff;

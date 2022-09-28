@@ -1,297 +1,225 @@
 @charset "utf-8";
 @import '../utility/*';
-#contact {
-  // BASE ON FORM DEFAULT
-  .errMsg {
-    margin-left: 1em;
-    padding-bottom: 1px;
-    display: block;
-    line-height: 1.4;
-    text-indent: -.9em;
+.hamburger{
+  display: none;
+}
+.layerMenu{
+  display: none !important;
+}
+.contact{
+  display: none;
+}
+.inHeader{
+  justify-content: center !important;
+  align-items: center;
+  .logo{
+    top:0 !important;
+    img{
+      max-width: 100px !important;
     }
-  .formError {
-    padding-bottom: 13px;
-    display: block;
   }
-  .fixed {
-    padding-bottom: 0px;
+}
+.contactbox{
+  display: none !important;
+}
+.before-footer{
+  display: none !important;
+}
+.footer{
+  .inFooter{
+    display: none !important;
   }
-  .formError .formErrorClose {
-    border: solid #252525 2px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    color: #efefef;
-    background: #333;
-    font-weight: bold;
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 84px;
+  @include max-screen(990px){
+      margin-top: 82px;
+  }
+}
+
+.bg {
+  background: url(../../img/municipality/bg-main.jpg);
+  background-size: cover;
+
+  .title {
+      display: flex;
+      font-size: 38px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      width: 100%;
+      height: 216px;
+      margin: 0 auto;
+      background-color: rgb(255, 155, 20, 0.8);
+
+      span {
+          color: #fff;
+      }
+  }
+}
+.breadcrumb {
+  width: 100%;
+  margin: 20px auto;
+  max-width: 1024px;
+
+  ul {
+      display: flex;
+      justify-content: flex-start;
+      list-style: none;
+      color: #A0A0A0;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+
+      li {
+          a {
+              position: relative;
+              color: #A0A0A0;
+              padding-right: 30px;
+
+              &:after {
+                  content: "";
+                  position: absolute;
+                  border-top: 1px solid #A0A0A0;
+                  border-right: 1px solid #A0A0A0;
+                  transform: rotate(45deg);
+                  width: 4px;
+                  height: 4px;
+                  top: 7.5px;
+                  right: 15px;
+              }
+          }
+      }
+  }
+}
+.wcm{
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1040px;
+}
+.content{
+  .ttl{
+    color:#E59601;
+    @include font(22,calc(52/22),0.1em,bold);
     text-align: center;
-    line-height: middle;
-    cursor: pointer;
-    z-index:2;
-    @include add_prefix(border-radius, 9px 9px 9px 9px);
-    @include add_prefix(box-shadow, 1px -1px 3px #888);
+    margin-top:76px;
+    margin-bottom: 20px;
   }
-  .formError .formErrorClose:hover {
-    background: #666;
+  .txt{
+    @include font(16,calc(34/16),0.1em,400);
+    text-align: center;
   }
-  .fixed .formErrorClose {
-    display: none;
-  }
-  .formError .formErrorContent {
-    padding: 6px 10px;
-    width: 180px;
-    position:relative;
-    color: #fff;
-    background: #252525;
-    font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,"ヒラギノ丸ゴ Pro W4",HiraMaruPro-W4,"ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,Osaka,sans-serif;
-    font-size: 11px;
-    margin: 0 0;
-    z-index:1;
-    @include add_prefix(border-radius, 3px);
-    @include add_prefix(box-shadow, 0px 0px 6px #888);
-  }
-  .fixed .formErrorContent {
-    margin-top: .5em;
-    background: #f60;
-    margin: 0 0 30px 0;
-    @include add_prefix(border-radius, none);
-    @include add_prefix(box-shadow, none);
-  }
-  .fadeOut { opacity: .2;
-    filter: alpha(opacity=20);
-  }
-  .formError .formErrorArrow {
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    margin: 0 0 30px 0;
-    z-index:0;
-  }
-  .fixed .formErrorArrow {
-    display: none;
-  }
-  .formError .formErrorArrowBottom {
-    margin: -6px;
-    top: 0;
-  }
-  .fixed .formErrorArrowBottom {
-    display: none;
-  }
-
-  .formError .formErrorArrow div {
-    margin: 0 auto;
-    display: block;
-    height: 1px;
-    background: #252525;
-    line-height: 0px;
-    font-size: 0px;
-    @include add_prefix(box-shadow, 0px 2px 3px #888);
-  }
-  .formError .formErrorArrowBottom div{
-    @include add_prefix(box-shadow, none);
-  }
-  .formError .formErrorArrow .line10 {
-    width: 19px;
-  }
-  .formError .formErrorArrow .line9 {
-    width: 17px;
-  }
-  .formError .formErrorArrow .line8 {
-    width: 15px;
-  }
-  .formError .formErrorArrow .line7 {
-    width: 13px;
-  }
-  .formError .formErrorArrow .line6 {
-    width: 11px;
-  }
-  .formError .formErrorArrow .line5 {
-    width: 9px;
-  }
-  .formError .formErrorArrow .line4 {
-    width: 7px;
-  }
-  .formError .formErrorArrow .line3 {
-    width: 5px;
-  }
-  .formError .formErrorArrow .line2 {
-    width: 3px;
-  }
-  .formError .formErrorArrow .line1{
-    width: 1px;
-  }
-  // BASE ON FORM DEFAULT
-
-  /* dislay */
-  .hid_url { display:none;}
-  form p.test {
-    position: relative;
-    color: #C1C0BC;
-  }
-  form p.test label {
-    position: absolute;
-    top: 3px;
-    left: 10px;
-    font-weight:normal;
-  }
-  form p.test br {
-    display: none;
-  }
-
-  /* contact */
-  .formBlock {
-    max-width:890px;
-    margin:auto;
-  }
-
-  .txtContact {
-    text-align:left;
-    font-size:16px;
-    margin:70px auto 50px;
-  }
-  .txtContact01 {
-    font-size:14px;
-    margin-bottom:50px;
-  }
-
-  .tableContact em, .txtContact em {
-    color:#fb2a2a;
-    font-style:normal;
-  }
-
-  .tableContact {
-    border-top: #8f8f8f solid 1px;
-    border-bottom: #8f8f8f solid 1px;
-    width:100%;
-    margin:30px 0 50px;
-    font-size:15px;
-    text-align:left;
-    td, th {
-      border-bottom: #8f8f8f solid 1px;
-      padding:20px;
-      vertical-align:top;
+  &--02{
+    background: url(../../img/contact/bg-c2.png);
+    padding: 37px 0 42px;
+    width: 100%;
+    margin-top:58px;
+    .ttl{
+      @include font(28,calc(101/28),0.1em,bold);
+      text-align: center;
+      color: #000;
+      margin-top:0;
+      margin-bottom:0;
     }
-    th {
-      background:#ededed;
-      width:210px;
-      font-weight:normal;
-    }
-    td {
+    .phone{
+      @include font(12,calc(14/12),0.1em,400);
+      text-align: center;
+      width: 100%;
+      max-width: 529px;
+      margin: 0 auto;
+      padding:20px 0 36px;
+      border: 1px solid #000;
+    p{
       position: relative;
+      @include lato;
+      @include font(46,calc(55/46),0,bold);
+      text-align: center;
+      padding-left: 43px;
+      &:before{
+        content: "";
+        position: absolute;
+        background: url(../../img/contact/phone.svg);
+        width: 31px;
+        height: 31px;
+        top: calc(50% - 15.5px);
+        right: calc(100% - 110px);
+      }
     }
-    input[type="text"], input[type="email"], input[type="number"], input[type="url"] {
-      width:300px;
-      height:23px;
-      color:#1a1a1a;
     }
-    input[type="text"], textarea {
-      border:#8f8f8f solid 1px;
-    }
-    .size01 input[type="text"] {
-      width:160px;
-    }
-    .size02 input[type="text"], textarea {
-      width: 100%;
-    }
-    textarea {
-      height: 150px;
-    }
-  }
-
-  .tableContact input[type="text"], .tableContact textarea {
-  }
-
-  #contact #footerWrap, #contact .fixBtn, #contact .headerR, #contact #gNaviWrap, #contact #gNaviWrap01, #contact h1{
-   // display:none;
-  }
-  #contact .logo {
-   // margin:35px auto;
-  }
-  .stepImg {
-    margin: 30px 0;
-    img {
-      display: block;
-      width: 100%;
+    .txt{
+      @include font(15,calc(32/15),0.1em,400);
+      text-align: center;
+      margin-top:30px;
     }
   }
-
-  .stepImg {
-    margin: 30px 0;}
-
-  .tabForm {
-    margin: 50px auto 0;}
-  .tabForm ul {
-    font-size: 0;
-    letter-spacing: 0;
-    margin: 0;
-    border-bottom: 2px solid #000;
-  }
-  .tabForm ul li {
-    display: inline-block;
-    width: 50%;
-    padding: 0;
-  }
-  .tabForm ul li input {
-    position: absolute;
-    opacity: 0;
-  }
-  .tabForm ul li label {
-    display: block;
-    line-height: 60px;
+}
+.form{
+  padding-top:40px;
+  width: 100%;
+  margin-top:89px;
+  &__ttl{
+    position: relative;
+    @include font(28,calc(101/28),0.1em,bold);
     text-align: center;
-    font-size: 20px;
+    color:#E59601;
+    &:before{
+      content: "";
+      position: absolute;
+      background: url(../../img/contact/mail-or.svg);
+      width: 40px;
+      height: 28px;
+      left: calc(50% - 20px);
+      top:-7px;
+    }
   }
-  .tabForm ul li input:checked ~ label {background: #000;
-    color: #fff;
+  &__step{
+    background: url(../../img/contact/step1-or.svg);
+    @include aspect-ratio(680px,48px);
+    background-size: cover;
+    margin:25px auto 42px;
+    width: 100%;
+    max-width: 680px;
   }
-  .tabForm ul li label:hover {opacity: 1;
-    background: #555;
-    color: #fff;
+  &__txt{
+    @include font(16,calc(34/16),0.1em,400);
+    text-align:center;
   }
-
-  .tableContact input[type="text"],
-  .tableContact input[type="url"],
-  .tableContact input[type="email"],
-  .tableContact textarea {
-    padding: 10px;
-    height: auto;
-    border: 1px solid #aaa;
-  }
-  .tableContact select {
-    -webkit-appearance: none;
-    border: 1px solid #aaa;
-    padding: 10px;
-  }
-  .tableContact .pRadio {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .tableContact .pRadio input {
-    position: absolute;
-    opacity: 0;
-  }
-  .tableContact .pRadio label {
-    display: inline-block;
-    margin: 0 5px 0 0;
-    border: 1px solid #aaa;
-    padding: 10px 20px;
-  }
-
-  .tableContact .pRadio input:checked ~ label {
-    background: #555;
-    border-color: #555;
-    color: #fff;
-  }
-
-  button {
-    height: 60px;
-    margin: 20px auto;
-    padding: 0 100px;
-    background: #eee;
+  &__content{
+    margin-top:56px;
+    .row{
+      display: flex;
+      width: 100%;
+      border-top:1px solid  #D8D8D8;
+      justify-content: space-between;
+      .th{
+        display: flex;
+        width: 100%;
+        max-width: 250px;
+        background-color: #F2F0E7;
+        align-items: flex-start;
+        padding:38px 20px;
+        .cat{
+          background-color: #E59601;
+          color: #fff;
+          @include font(16,calc(22/16),0.1em,bold);
+         text-align: center;
+          width: 100%;
+          max-width: 48px;
+          padding: 1px 0 2px;
+        }
+        .row-name{
+          @include font(16,calc(22/16),0.1em,bold);
+          padding-left: 12px;
+          span{
+            display: block;
+            @include font(12,calc(20/12),0.1em,500);  
+          }
+        }
+      }
+    }
   }
 }

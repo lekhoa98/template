@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="48" viewBox="0 0 680 48">
+  <g id="Group_27466" data-name="Group 27466" transform="translate(-343 -1374)">
+    <g id="Group_1964" data-name="Group 1964" transform="translate(60 101)">
+      <rect id="Rectangle_16093" data-name="Rectangle 16093" width="74" height="48" transform="translate(283 1273)" fill="#e59601"/>
+      <rect id="Rectangle_16123" data-name="Rectangle 16123" width="74" height="48" transform="translate(523 1273)" fill="#d0d0d0"/>
+      <rect id="Rectangle_16125" data-name="Rectangle 16125" width="74" height="48" transform="translate(763 1273)" fill="#d0d0d0"/>
+      <g id="Rectangle_16122" data-name="Rectangle 16122" transform="translate(283 1273)" fill="none" stroke="#e59601" stroke-width="1">
+        <rect width="200" height="48" stroke="none"/>
+        <rect x="0.5" y="0.5" width="199" height="47" fill="none"/>
+      </g>
+      <g id="Rectangle_16124" data-name="Rectangle 16124" transform="translate(523 1273)" fill="none" stroke="#d0d0d0" stroke-width="1">
+        <rect width="200" height="48" stroke="none"/>
+        <rect x="0.5" y="0.5" width="199" height="47" fill="none"/>
+      </g>
+      <g id="Rectangle_16126" data-name="Rectangle 16126" transform="translate(763 1273)" fill="none" stroke="#d0d0d0" stroke-width="1">
+        <rect width="200" height="48" stroke="none"/>
+        <rect x="0.5" y="0.5" width="199" height="47" fill="none"/>
+      </g>
+      <text id="入力" transform="translate(420 1305)" fill="#e59601" font-size="20" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.1em"><tspan x="-21" y="0">入力</tspan></text>
+      <text id="内容確認" transform="translate(660 1305)" fill="#d0d0d0" font-size="20" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.1em"><tspan x="-43" y="0">内容確認</tspan></text>
+      <text id="完了" transform="translate(900 1305)" fill="#d0d0d0" font-size="20" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.1em"><tspan x="-21" y="0">完了</tspan></text>
+      <text id="Step1" transform="translate(320 1303)" fill="#fff" font-size="16" font-family="Lato-Bold, Lato" font-weight="700" letter-spacing="0.05em"><tspan x="-22.428" y="0">Step1</tspan></text>
+      <text id="Step2" transform="translate(560 1303)" fill="#fff" font-size="16" font-family="Lato-Bold, Lato" font-weight="700" letter-spacing="0.05em"><tspan x="-22.428" y="0">Step2</tspan></text>
+      <text id="Step3" transform="translate(800 1303)" fill="#fff" font-size="16" font-family="Lato-Bold, Lato" font-weight="700" letter-spacing="0.05em"><tspan x="-22.428" y="0">Step3</tspan></text>
+      <line id="Line_79" data-name="Line 79" x2="40" transform="translate(483 1297)" fill="none" stroke="#d0d0d0" stroke-width="1"/>
+      <line id="Line_91" data-name="Line 91" x2="40" transform="translate(723 1297)" fill="none" stroke="#d0d0d0" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
