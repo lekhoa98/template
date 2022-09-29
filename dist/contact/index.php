@@ -169,6 +169,11 @@ include(APP_PATH . 'libs/head.php');
                     <input type="checkbox" name="checksubmit" value="ok" id="checksubmit">
                     <span class="checkbox-txt">個人情報の取扱いに同意する</span>
                 </label>
+                <div id="btn" class="form__button disable">
+                    <span class="btn-txt">
+                    入力内容を確認する
+                    </span>
+                </div>
             </div>
         </div>
     </main>
@@ -187,6 +192,14 @@ include(APP_PATH . 'libs/head.php');
                 $('html, body').scrollTop($('#contactform').offset().top);
             }
         };
+    })
+    $('#checksubmit').change(function(){
+        if($(this).is(":checked")){
+            $("#btn").removeClass("disable");
+        }
+        else{
+            $("#btn").addClass("disable");
+        }
     })
 
     function check() {
