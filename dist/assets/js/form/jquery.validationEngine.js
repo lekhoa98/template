@@ -252,7 +252,7 @@
                 if(field.val().length > 0){
                     // validate the current field
                     window.setTimeout(function() {
-                        methods._validateField(field, options);
+                        methods._Field(field, options);
                     }, (event.data) ? event.data.delay : 0);
 
                 }
