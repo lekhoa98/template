@@ -46,6 +46,8 @@ var plugins = [
   "https://downloads.wordpress.org/plugin/ninjascanner.latest-stable.zip",
   "https://downloads.wordpress.org/plugin/siteguard.latest-stable.zip",
   "https://downloads.wordpress.org/plugin/webp-express.latest-stable.zip",
+  "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.zip",
+  
 ];
 
 gulp.task("downloadWP", function (done) {

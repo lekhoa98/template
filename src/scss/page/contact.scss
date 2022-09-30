@@ -497,21 +497,27 @@ input[type="number"] {
     padding:39px 0;
     transition: all 0.3s;
     border:1px solid #E59601;
-    .btn-txt{
-      position: relative;
-      @include font(24,calc(22/24),0.1em,bold);
-      display: block;
-      color:#fff;
-      z-index: 1;
-      transition: all 0.3s;
-      &:after{
-        content: "";
-        position: absolute;
-        width: 50px;
-        border-top: 1px solid #fff;
-        right:0;
-        top:calc(50% - 1px);
+    button{
+      width: 100%;
+      padding:0;
+      background-color: transparent;
+      border: none;
+      .btn-txt{
+        position: relative;
+        @include font(24,calc(22/24),0.1em,bold);
+        display: block;
+        color:#fff;
+        z-index: 1;
         transition: all 0.3s;
+        &:after{
+          content: "";
+          position: absolute;
+          width: 50px;
+          border-top: 1px solid #fff;
+          right:0;
+          top:calc(50% - 1px);
+          transition: all 0.3s;
+        }
       }
     }
     &:before{
