@@ -184,6 +184,7 @@ include(APP_PATH.'libs/head.php');
   }
   $(document).ready(function() {
     var address = "xxx" + "@" + "xxxxxxx.com";
+    
     $("#mailContact").attr("href", "mailto:" + address).text(address);
 
     $('#btnSend').click(function(){
