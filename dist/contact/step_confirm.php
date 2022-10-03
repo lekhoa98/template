@@ -12,7 +12,8 @@ $reg_url          = (!empty($_POST['url'])) ? htmlspecialchars($_POST['url']) : 
 //end always keep this
 
 //お問い合わせフォーム内容
-$reg_sl01         = (!empty($_POST['sl01'])) ? $_POST['sl01'] : '';
+$reg_sl01         = (!empty($_POST['fieldCheck'])) ? $_POST['fieldCheck'] : '';
+var_dump($reg_sl01);
 $reg_name         = (!empty($_POST['nameuser'])) ? htmlspecialchars($_POST['nameuser']) : '';
 $reg_company      = (!empty($_POST['company'])) ? htmlspecialchars($_POST['company']) : '';
 $reg_gender       = (!empty($_POST['gender'])) ? htmlspecialchars($_POST['gender']) : '';
@@ -79,7 +80,9 @@ if ($actionFlag == "confirm") {
             <table class="tableContact" cellspacing="0">
               <tr>
                 <th>お問い合わせの種類</th>
-                <td><?php echo $reg_sl01 ?></td>
+                <td><?php for($i=0;$i<=count($reg_sl01);$i++){?>
+                  <p><?php echo $reg_sl01[$i];?></p>
+                <?php } ?></td>
               </tr>
               <tr>
                 <th>お名前</th>
