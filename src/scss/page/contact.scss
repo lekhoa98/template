@@ -17,6 +17,9 @@ body{
 
 textarea {
   height: 250px !important;
+  @include SP{
+    height: 190px !important;
+  }
 }
 
 textarea,
@@ -31,14 +34,23 @@ input[type="number"] {
 
   &.input50 {
     max-width: calc(50% - 10px);
+    @include SP{
+      max-width: 100%;
+    }
   }
 
   &.input30 {
     max-width: calc(50% - 124px);
+    @include SP{
+      max-width: 100%;
+    }
   }
 
   &.input20 {
     max-width: calc(50% - 144px);
+    @include SP{
+      max-width: calc(50% - 58px);
+    }
   }
 
   width: 100%;
@@ -95,6 +107,9 @@ input[type="number"] {
 
   @include max-screen(990px) {
     margin-top: 82px;
+  }
+  @include SP{
+    margin-top:0;
   }
 }
 
@@ -190,7 +205,8 @@ input[type="number"] {
     @include SP{
       @include font(15, calc(30/15), 0.1em, 400);
       text-align: justify;
-      padding: 0 20px;
+      width: calc(100% - 40px);
+      margin: 0 auto;
     }
   }
 
@@ -232,7 +248,7 @@ input[type="number"] {
           @include font(34,calc(41/34),0,bold);
           margin:0 auto 10px;
           max-width: 333px;
-
+          padding-left:34px;
         }
 
         &:before {
@@ -249,7 +265,7 @@ input[type="number"] {
           background-size: cover;
           right:0;
           top:calc(50% - 14px);
-          left: 35px;
+          left: 27px;
           }
         }
       }
@@ -315,10 +331,15 @@ input[type="number"] {
       @include aspect-ratio(100%,17.3%);
       background-repeat: no-repeat;
       background-size: cover;
-      max-width: 727px;
+      width: calc(100% - 40px);
+      max-width: 100%;
+      margin: 35px auto 32px;
     }
     &.step2{
       background: url(../../img/contact/step2-or.svg);
+      @include SP{
+        background: url(../../img/contact/step2sp-or.svg);
+      }
     }
     &.step3{
       background: url(../../img/contact/step3-or.svg);
@@ -340,7 +361,9 @@ input[type="number"] {
 
   &__content {
     margin-top: 56px;
-
+    @include SP{
+      margin-top:36px;
+    }
     .row {
       display: flex;
       width: 100%;
@@ -362,6 +385,8 @@ input[type="number"] {
         padding: 38px 20px;
         @include SP{
           max-width: 100%;
+          padding:20px 20px;
+          align-items: center;
         }
         .cat {
           background-color: #E59601;
@@ -376,11 +401,18 @@ input[type="number"] {
           width: 100%;
           max-width: 48px;
           padding: 1px 0 2px;
+          @include SP{
+            @include font(13,calc(22/13),0.1em,bold);
+            max-width: 40px
+          }
         }
 
         .row-name {
           @include font(16, calc(22/16), 0.1em, bold);
           padding-left: 12px;
+          @include SP{
+            @include font(15,calc(22/15),0.1em,bold)
+          }
           &.step2{
             padding-left: 36px;
           }
@@ -397,13 +429,17 @@ input[type="number"] {
       .td {
         padding: 34px 29px 19px 31px;
         width: 100%;
-
+        @include SP{
+          padding: 18px 20px 6px 20px;
+        }
         .checkboxGr {
           display: flex;
           flex-wrap: wrap;
           width: 100%;
           max-width: 690px;
-
+          @include SP{
+            max-width: 100%;
+          }
           .item {
             position: relative;
             width: calc(50% - 10px);
@@ -412,10 +448,16 @@ input[type="number"] {
             @include max-screen(1040px){
               max-width: 325px;
             }
-            &:nth-child(2n+1) {
-              margin-right: 20px;
+            @include min-screen(768px){
+              &:nth-child(2n+1) {
+                margin-right: 20px;
+              }
             }
-
+            @include SP{
+              width: 100%;
+              max-width: 100%;
+              margin-bottom:12px;
+            }
             input {
               position: absolute;
               top: 0;
@@ -449,6 +491,9 @@ input[type="number"] {
               padding: 7px 10px 9px 43px;
               border: 1px solid #A0A0A0;
               display: block;
+              @include SP{
+                @include font(15, calc(34/15), 0.1em, 400);
+              }
 
               &:before {
                 content: "";
@@ -491,7 +536,16 @@ input[type="number"] {
           @include font(15, calc(34/15), 0.1em, 400);
 
           &.txt {
-            padding-left: 20px
+            padding-left: 20px;
+            @include SP{
+              width: 62%;
+              display: inline-flex;
+              @include font(14, calc(22/14), 0.1em, 400);
+            }
+            @include max-screen(386px){
+              position: relative;
+              top:-10px;
+            }
           }
         }
       }
@@ -502,15 +556,24 @@ input[type="number"] {
     margin-top: 80px;
     padding: 0 60px;
     margin-bottom: 30px;
-
+    @include SP{
+      padding:0 20px;
+      margin-top:36px;
+    }
     .ttl {
       @include font(16, calc(22/16), 0.1em, bold);
       margin-bottom: 20px;
+      @include SP{
+        @include font(15, calc(30/15), 0.1em, bold);
+        margin-bottom: 8px;
+      }
     }
 
     .txt {
       @include font(15, calc(30/15), 0.1em, 400);
-
+      @include SP{
+        @include font(14, calc(30/14), 0.1em, 400);
+      }
       a {
         color: #0000EE;
         text-decoration: underline;
@@ -528,7 +591,9 @@ input[type="number"] {
     display: block;
     padding: 24px 20px 26px;
     cursor: pointer;
-
+    @include SP{
+      width: calc(100% - 40px);
+    }
     input {
       position: absolute;
       width: 100%;
@@ -552,7 +617,9 @@ input[type="number"] {
       position: relative;
       display: inline-block;
       padding-left: 40px;
-
+      @include SP{
+        @include font(17, calc(30/17), 0.1em, bold);
+      }
       &:before {
         position: absolute;
         content: "";
@@ -595,6 +662,11 @@ input[type="number"] {
     padding:39px 0;
     transition: all 0.3s;
     border:1px solid #E59601;
+    @include SP{
+      width: calc(100% - 40px);
+      padding:33px 0;
+      margin: 46px auto;
+    }
     button{
       width: 100%;
       padding:0;
@@ -607,6 +679,9 @@ input[type="number"] {
         color:#fff;
         z-index: 1;
         transition: all 0.3s;
+        @include SP{
+          @include font(20,calc(20/30),0.1em,bold);
+        }
         &:after{
           content: "";
           position: absolute;

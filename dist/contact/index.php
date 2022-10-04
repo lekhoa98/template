@@ -172,7 +172,7 @@ include(APP_PATH . 'libs/head.php');
                         <span class="checkbox-txt">個人情報の取扱いに同意する</span>
                     </label>
                     <div id="btn" class="form__button disable">
-                        <button id="btnConfirm">
+                        <button id="btnConfirm" disabled>
                         <span class="btn-txt">
                             入力内容を確認する
                         </span>
@@ -203,8 +203,10 @@ include(APP_PATH . 'libs/head.php');
     $('#checksubmit').change(function() {
         if ($(this).is(":checked")) {
             $("#btn").removeClass("disable");
+            $("#btnConfirm").prop('disabled', false);
         } else {
             $("#btn").addClass("disable");
+            $("#btnConfirm").prop('disabled', true);
         }
     })
 
