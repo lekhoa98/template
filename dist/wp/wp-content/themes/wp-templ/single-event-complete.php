@@ -1,10 +1,12 @@
 <?php
-include_once(dirname(__FILE__) . '/step_confirm.php');
 require_once(APP_PATH . "libs/form/phpmailer/PHPMailer.php");
 require_once(APP_PATH . "libs/form/phpmailer/SMTP.php");
 require_once(APP_PATH . "libs/form/phpmailer/Exception.php");
 
-if ($actionFlag == 'send') {
+if (session_status() === PHP_SESSION_NONE) session_start();
+$thisPageName = 'event';
+
+if (!empty($_POST['actionFlag']) && $_POST['actionFlag'] == "send") {
   $aMailto = $aMailtoContact;
   if (count($aBccToContact)) $aBccTo = $aBccToContact;
   $from = $fromContact;
@@ -72,7 +74,7 @@ $reg_fax
 $reg_zipcode
 
 ■住所
-$reg_pref_name$reg_address01$reg_address02
+$reg_address
 
 ■メールアドレス
 $reg_email
@@ -104,9 +106,8 @@ $email_head_ctm_admin
 
 $msgBody
 
----------------------------------------------------------------
-" . $email_body_footer . "
----------------------------------------------------------------";
+
+";
 
   //お客様用メッセージ
   $body_user = "
@@ -186,7 +187,6 @@ $msgBody
   }
   // ▲ ▲ ▲ END Detect SPAMMER ▼ ▼ ▼ //
 
-
   if ($allow_send_email) {
     //////// お客様受け取りメール送信
     $email = new PHPMailer\PHPMailer\PHPmailer();
@@ -231,71 +231,55 @@ $msgBody
   }
 
   $_SESSION['statusFlag'] = 1;
-  header("Location: " . APP_URL . "contact/complete/");
+  header("Location: " . get_the_permalink() . "complete/");
   exit;
 }
 
-if (!empty($_SESSION['statusFlag'])) unset($_SESSION['statusFlag']);
-else header('location: ' . APP_URL);
+if (!empty($_SESSION['statusFlag'])) {
+  unset($_SESSION['statusFlag']);
+  unset($_SESSION['ses_gtime_step2']);
+  unset($_SESSION['ses_from_step2']);
+  unset($_SESSION['ses_step3']);
+} else header('location: ' . APP_URL);
 
-$thisPageName = 'contact';
 include(APP_PATH . "libs/head.php");
-
-unset($_SESSION['ses_gtime_step2']);
-unset($_SESSION['ses_from_step2']);
-unset($_SESSION['ses_step3']);
 ?>
-<!-- <meta http-equiv="refresh" content="15; url=<?php echo APP_URL ?>"> -->
+<meta http-equiv="refresh" content="15; url=<?php echo APP_URL ?>">
 <script type="text/javascript">
-history.pushState({
-  page: 1
-}, "title 1", "#noback");
-window.onhashchange = function(event) {
-  window.location.hash = "#noback";
-};
+  history.pushState({
+    page: 1
+  }, "title 1", "#noback");
+  window.onhashchange = function(event) {
+    window.location.hash = "#noback";
+  };
 </script>
-<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/contact.min.css">
 </head>
 
-<body id="contact">
-  <!-------------------------------------------------------------------------
-  HEADER
-  --------------------------------------------------------------------------->
+<body id="event" class="indexThx">
+  <!-- HEADER -->
   <?php include(APP_PATH . "libs/header.php") ?>
-  <main id="wrap" class="container">
-    <div class="bg">
-      <h1 class="title"><span>お問い合わせ</span></h1>
+  <div class="mainImg">
+    <h2>EVENT<span>お問い合わせ</span></h2>
+  </div>
+  <div class="container clearfix">
+
+    <div class="stepImg">
+      <img src="<?php echo APP_ASSETS; ?>img/common/form/img_step03.svg" width="714" height="45" alt="フォームからのお問い合わせ　Step" class="pc" />
+      <img src="<?php echo APP_ASSETS; ?>img/common/form/img_step03SP.svg" width="345" height="55" alt="フォームからのお問い合わせ　Step" class="sp" />
     </div>
-    <div class="breadcrumb">
-      <ul>
-        <li><a href="https://www.google.com.vn">TOP</a></li>
-        <li>お問い合わせ</li>
-      </ul>
+
+    <div class="containerIndexThx">
+      <p class="t20b20 fz18"><strong>送信が完了いたしました。</strong></p>
+      <p class="mt20 t20b20 fz14">
+        お問い合わせありがとうございます。<br>後日、担当よりご連絡させていただきます。<br />3日以内に弊社より連絡がない場合はお手数ですが、再送信もしくは直接ご連絡くださいますようお願い致します。<br>
+      </p>
+      <p class="t20b0"><a href="<?php echo APP_URL; ?>">←TOPへ戻る</a></p>
     </div>
-    <div class="wcm">
-      <div class="form">
-        <h2 class="form__ttl">フォームからのお問い合わせ</h2>
-        <div class="form__step step3"></div>
-        <div class="form__txtend">お問い合わせいただきありがとうございました</div>
-        <div class="form__txt">
-          送信が完了しました<br>確認後、折り返しご連絡させていただく場合がござますので、ご承知おきください。<br>2営業日以上経ってもご連絡がない場合は、システムトラブルの可能性がありますので、<br>お手数ですがお電話にてお問い合わせください。
-        </div>
-        <p class="t20b0"><a href="<?php echo APP_URL; ?>">←TOPへ戻る</a></p>
-      </div>
-    </div>
-    <?php // include(APP_PATH.'libs/contactBox.php')
+  </div>
+  <?php // include(APP_PATH.'libs/eventBox.php') 
   ?>
-  </main>
-  <!-------------------------------------------------------------------------
-  FOOTER
-  --------------------------------------------------------------------------->
+  <!-- FOOTER -->
   <?php include(APP_PATH . 'libs/footer.php') ?>
-  <script>
-  $(document).ready(function() {
-    var address = "xxx" + "@" + "xxxxxxx.com";
-    $("#mailContact").attr("href", "mailto:" + address).text(address);
-  })
-  </script>
 </body>
 
 </html>

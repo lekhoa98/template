@@ -1,6 +1,20 @@
 @charset "utf-8";
 @import '../utility/*';
 
+@include PC{
+  .sp{
+    display: none;
+  }
+}
+@include SP{
+  .pc{
+    display: none;
+  }
+}
+body{
+  color: #000;
+}
+
 textarea {
   height: 250px !important;
 }
@@ -98,8 +112,11 @@ input[type="number"] {
     width: 100%;
     height: 216px;
     margin: 0 auto;
-    background-color: rgb(255, 155, 20, 0.8);
-
+    background-color: rgba(255, 155, 20, 0.8);
+    @include SP{
+      @include font(26,calc(52/26),0.1em,bold);
+      height: 110px;
+    }
     span {
       color: #fff;
     }
@@ -110,7 +127,9 @@ input[type="number"] {
   width: 100%;
   margin: 20px auto;
   max-width: 1024px;
-
+  @include SP{
+    padding-left: 20px;
+  }
   ul {
     display: flex;
     justify-content: flex-start;
@@ -147,6 +166,9 @@ input[type="number"] {
   margin: 0 auto;
   width: 100%;
   max-width: 1040px;
+  @include SP{
+    padding:0;
+  }
 }
 
 .content {
@@ -156,11 +178,20 @@ input[type="number"] {
     text-align: center;
     margin-top: 76px;
     margin-bottom: 20px;
+    @include SP{
+      @include font(20, calc(35/20),0.1em,bold);
+      margin-top: 39px;
+    }
   }
 
   .txt {
     @include font(16, calc(34/16), 0.1em, 400);
     text-align: center;
+    @include SP{
+      @include font(15, calc(30/15), 0.1em, 400);
+      text-align: justify;
+      padding: 0 20px;
+    }
   }
 
   &--02 {
@@ -168,13 +199,15 @@ input[type="number"] {
     padding: 37px 0 42px;
     width: 100%;
     margin-top: 58px;
-
     .ttl {
       @include font(28, calc(101/28), 0.1em, bold);
       text-align: center;
       color: #000;
       margin-top: 0;
       margin-bottom: 0;
+      @include SP{
+        @include font(22,calc(36/22),0.1em,bold)
+      }
     }
 
     .phone {
@@ -185,13 +218,22 @@ input[type="number"] {
       margin: 0 auto;
       padding: 20px 0 36px;
       border: 1px solid #000;
-
+      @include SP{
+        width: calc(100% - 40px);
+        margin: 20px auto 0;
+      }
       p {
         position: relative;
         @include lato;
         @include font(46, calc(55/46), 0, bold);
         text-align: center;
         padding-left: 43px;
+        @include SP{
+          @include font(34,calc(41/34),0,bold);
+          margin:0 auto 10px;
+          max-width: 333px;
+
+        }
 
         &:before {
           content: "";
@@ -201,6 +243,14 @@ input[type="number"] {
           height: 31px;
           top: calc(50% - 15.5px);
           right: calc(100% - 110px);
+          @include SP{
+          width: 28px;
+          height: 28px;
+          background-size: cover;
+          right:0;
+          top:calc(50% - 14px);
+          left: 35px;
+          }
         }
       }
     }
@@ -209,6 +259,13 @@ input[type="number"] {
       @include font(15, calc(32/15), 0.1em, 400);
       text-align: center;
       margin-top: 30px;
+      @include SP{
+        width: calc(100% - 40px);
+        @include font(14,calc(28/14),0.1em,400);
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -217,13 +274,17 @@ input[type="number"] {
   padding-top: 40px;
   width: 100%;
   margin-top: 89px;
-
+  @include SP{
+    margin-top:54px;
+  }
   &__ttl {
     position: relative;
     @include font(28, calc(101/28), 0.1em, bold);
     text-align: center;
     color: #E59601;
-
+    @include SP{
+      @include font(22,calc(36/22),0.1em,bold);
+    }
     &:before {
       content: "";
       position: absolute;
@@ -232,6 +293,13 @@ input[type="number"] {
       height: 28px;
       left: calc(50% - 20px);
       top: -7px;
+      @include SP{
+      width: 32px;
+      height: 22px;
+      background-size: cover;
+      left: calc(50% - 16px);
+      top: -29px;
+      }
     }
   }
 
@@ -242,11 +310,32 @@ input[type="number"] {
     margin: 25px auto 42px;
     width: 100%;
     max-width: 680px;
+    @include SP{
+      background: url(../../img/contact/step1sp-or.svg);
+      @include aspect-ratio(100%,17.3%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 727px;
+    }
+    &.step2{
+      background: url(../../img/contact/step2-or.svg);
+    }
+    &.step3{
+      background: url(../../img/contact/step3-or.svg);
+    }
   }
-
+  &__txtend{
+    @include font(22,calc(34/22),0.1em,bold);
+    text-align: center;
+  }
   &__txt {
     @include font(16, calc(34/16), 0.1em, 400);
     text-align: center;
+    @include SP{
+      @include font(15,calc(30/15),0.1em,400);
+      text-align: left;
+      padding: 0 20px;
+    }
   }
 
   &__content {
@@ -257,7 +346,9 @@ input[type="number"] {
       width: 100%;
       border-top: 1px solid #D8D8D8;
       justify-content: space-between;
-
+      @include SP{
+        flex-wrap: wrap;
+      }
       &:last-child {
         border-bottom: 1px solid #D8D8D8;
       }
@@ -269,7 +360,9 @@ input[type="number"] {
         background-color: #F2F0E7;
         align-items: flex-start;
         padding: 38px 20px;
-
+        @include SP{
+          max-width: 100%;
+        }
         .cat {
           background-color: #E59601;
           color: #fff;
@@ -288,10 +381,15 @@ input[type="number"] {
         .row-name {
           @include font(16, calc(22/16), 0.1em, bold);
           padding-left: 12px;
-
+          &.step2{
+            padding-left: 36px;
+          }
           span {
             display: block;
             @include font(12, calc(20/12), 0.1em, 500);
+            @include SP{
+              display: inline-block;
+            }
           }
         }
       }
@@ -542,4 +640,12 @@ input[type="number"] {
       }
   }
   }
+  &__back{
+    text-align: center;
+    a{
+      @include font(14,calc(22/14),0.1em,400);
+      text-decoration: underline;
+      color:#000;
+    }
+  } 
 }

@@ -27,12 +27,12 @@ include(APP_PATH . 'libs/head.php');
         <div class="wcm">
             <div class="content content--01">
                 <h2 class="ttl">
-                    お問い合わせいただく前に「FAQ よくある質問」ページをご参照ください。
+                    お問い合わせいただく前に <br class="sp">「FAQ よくある質問」ページを<br class="sp">ご参照ください。
                 </h2>
                 <div class="txt">
                     当社によく寄せられるお問い合わせ内容を <u>FAQ（よくある質問）</u> にまとめてご紹介しております。<br>
-                    営業時間外はお問い合わせの対応をいたしておりませんが、<br>
-                    こちらをご確認いただくことですぐに解決する場合もございますので、<br>
+                    営業時間外はお問い合わせの対応をいたしておりませんが、<br class="pc">
+                    こちらをご確認いただくことですぐに解決する場合もございますので、<br class="pc">
                     まずはご参照くださいますようお願い申し上げます。
                 </div>
             </div>
@@ -46,8 +46,7 @@ include(APP_PATH . 'libs/head.php');
                 </div>
                 <div class="txt">
                     専門担当が対応いたしますので、すぐにはお電話に出られない場合がございます。<br>
-                    お急ぎのところ恐れ入りますが、下記のお問い合わせフォームより<br>
-                    必要事項をご入力のうえ送信していただきましたら、<strong>3営業日以内</strong>に担当者よりご連絡さしあげます。
+                    お急ぎのところ恐れ入りますが、下記のお問い合わせフォームより<br class="pc">必要事項をご入力のうえ送信していただきましたら、<strong>3営業日以内</strong>に担当者よりご連絡さしあげます。
                 </div>
             </div>
         </div>
@@ -84,7 +83,7 @@ include(APP_PATH . 'libs/head.php');
                         <div class="row">
                             <div class="th">
                                 <p class="cat">必須</p>
-                                <div class="row-name">会社名・団体名<span>個人の方は「個人」と<br>ご記入ください</span></div>
+                                <div class="row-name">会社名・団体名<span>個人の方は「個人」と<br class="pc">ご記入ください</span></div>
                             </div>
                             <div class="td">
                                 <input type="text" name="company" id="company" class="input100 validate[required]">
@@ -144,7 +143,7 @@ include(APP_PATH . 'libs/head.php');
                                     class="txt">※郵便番号を入力すると自動で住所が入力されます</span>
                                 <p class="placeholder txt">例：5020928</p>
                                 <input type="text" name="addressuser" id="addressuser"
-                                    class="input100 validate[required,custom[phone]]">
+                                    class="input100">
                                 <p class="placeholder">例：岐阜県岐阜市旦島中1丁目5−25</p>
                             </div>
                         </div>

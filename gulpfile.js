@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var bulkSass = require("gulp-sass-bulk-import");
-const sass = require('gulp-sass')(require('sass'));
+var sass = require('gulp-sass');
 var plumber = require("gulp-plumber");
 var notify = require("gulp-notify");
 var uglify = require("gulp-uglify");
