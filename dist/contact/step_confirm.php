@@ -13,7 +13,6 @@ $reg_url          = (!empty($_POST['url'])) ? htmlspecialchars($_POST['url']) : 
 
 //お問い合わせフォーム内容
 $reg_sl01         = (!empty($_POST['fieldCheck'])) ? $_POST['fieldCheck'] : '';
-var_dump($reg_sl01);
 $reg_name         = (!empty($_POST['nameuser'])) ? htmlspecialchars($_POST['nameuser']) : '';
 $reg_company      = (!empty($_POST['company'])) ? htmlspecialchars($_POST['company']) : '';
 $reg_gender       = (!empty($_POST['gender'])) ? htmlspecialchars($_POST['gender']) : '';
@@ -23,7 +22,7 @@ $reg_department   = (!empty($_POST['department'])) ? htmlspecialchars($_POST['de
 $reg_tel          = (!empty($_POST['phoneuser'])) ? htmlspecialchars($_POST['phoneuser']) : '';
 $reg_fax          = (!empty($_POST['fax'])) ? htmlspecialchars($_POST['fax']) : '';
 $reg_zipcode      = (!empty($_POST['zipcode'])) ? htmlspecialchars($_POST['zipcode']) : '';
-$reg_address01    = (!empty($_POST['address01'])) ? htmlspecialchars($_POST['address01']) : '';
+$reg_address01    = (!empty($_POST['addressuser'])) ? htmlspecialchars($_POST['addressuser']) : '';
 $reg_address02    = (!empty($_POST['address02'])) ? htmlspecialchars($_POST['address02']) : '';
 $reg_pref_name    = (!empty($_POST['pref_name'])) ? htmlspecialchars($_POST['pref_name']) : '';
 $reg_email        = (!empty($_POST['emailuser'])) ? htmlspecialchars($_POST['emailuser']) : '';
@@ -126,7 +125,11 @@ function onSubmit(token) {
               <div class="th">
                 <div class="row-name step2">ご住所</div>
               </div>
-              <div class="td"><?php echo $reg_zipcode; ?></div>
+              <div class="td"><?php echo '〒'.$reg_zipcode; echo "<br>";
+              if(!empty($reg_address01)){
+                echo $reg_address01;
+              } ?></div>
+
             </div>
             <?php } ?>
             <?php if (!empty($reg_content)) { ?>
@@ -138,13 +141,15 @@ function onSubmit(token) {
             </div>
             <?php } ?>
           </div>
-          <input type="hidden" name="sl01" value="<?php echo $reg_sl01 ?>">
+          <input type="hidden" name="fieldCheck" value="<?php echo implode('
+',$reg_sl01) ?>">
           <input type="hidden" name="nameuser" value="<?php echo $reg_name ?>">
           <input type="hidden" name="company" value="<?php echo $reg_company ?>">
           <input type="hidden" name="phoneuser" value="<?php echo $reg_tel ?>">
           <input type="hidden" name="fax" value="<?php echo $reg_fax ?>">
           <input type="hidden" name="emailuser" value="<?php echo $reg_email ?>">
           <input type="hidden" name="zipcode" value="<?php echo $reg_zipcode ?>">
+          <input type="hidden" name="addressuser" value="<?php echo $reg_address01 ?>">
           <input type="hidden" name="content" value="<?php echo $reg_content ?>">
           <!-- always keep this -->
           <input type="hidden" name="url" value="<?php echo $reg_url ?>">

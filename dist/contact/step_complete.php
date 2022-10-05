@@ -8,18 +8,26 @@ if ($actionFlag == 'send') {
   $aMailto = $aMailtoContact;
   if (count($aBccToContact)) $aBccTo = $aBccToContact;
   $from = $fromContact;
-  $fromname = $fromName;
-  $subject_admin = "ホームページからお問い合わせがありました";
-  $subject_user = "お問い合わせありがとうございました";
-  $email_head_ctm_admin = "ホームページからお問い合わせがありました。";
-  $email_head_ctm_user = "この度はお問い合わせいただきまして誠にありがとうございます。
-こちらは自動返信メールとなっております。
-弊社にて確認した後、改めてご連絡させていただきます。
+  $fromname = "GL BASE 株式会社山一建材";
+  $subject_admin = "お問い合わせ受付 | GL BASE 株式会社山一建材";
+  $subject_user = "お問い合わせ受付 | GL BASE 株式会社山一建材";
+  $email_head_ctm_admin = "Webサイトからお問い合わせがありました。";
+  $email_head_ctm_user = "name 様
 
-以下、お問い合わせ内容となっております。
-ご確認くださいませ。";
+  GL BASE 株式会社山一建材です。
+  このメールは、 お問い合わせフォーム送信時の自動返信メールです。
+
+  このたびは、お問い合わせいただき、誠にありがとうございます。
+  担当者が確認し次第、改めてご連絡申し上げます。
+  
+  以下の内容で受付いたしました。ご確認くださいませ。";
   $email_body_footer = "
-    About company
+  GL BASE 株式会社山一建材
+
+  〒500-8879
+  岐阜市徹明通8丁目2番地
+  TEL.058-253-5353／FAX.058-253-5356
+  https://papabase.com
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);
@@ -28,65 +36,38 @@ if ($actionFlag == 'send') {
 
   $msgBody = "
 
-■お問い合わせの種類
+■お問い合わせ項目
 $reg_sl01
+
+■会社名・団体名
+$reg_company
 
 ■お名前
 $reg_name
 
-■性別
-$reg_gender
-";
-  if (isset($reg_checkAll01) && $reg_checkAll01 != '') $msgBody .= "
-
-■Checkbox1
-$reg_checkAll01
-";
-
-  if (isset($reg_company) && $reg_company != '') $msgBody .= "
-
-■会社名
-$reg_company
-";
-
-  if (isset($reg_department) && $reg_department != '') $msgBody .= "
-
-■部署
-$reg_department
-";
-
-  $msgBody .= "
-
-■お電話番号
-$reg_tel
-";
-
-  if (isset($reg_fax) && $reg_fax != '') $msgBody .= "
-
-■FAX番号
-$reg_fax
-";
-
-  $msgBody .= "
-■郵便番号
-$reg_zipcode
-
-■住所
-$reg_pref_name$reg_address01$reg_address02
-
 ■メールアドレス
 $reg_email
+
+■電話番号
+$reg_tel
 ";
+  if (isset($reg_fax) && $reg_fax != '') $msgBody .= "
 
-  if (isset($reg_time) && $reg_time != '') $msgBody .= "
+■FAX
+$reg_fax
+";
+  if (isset($reg_zipcode) && $reg_zipcode != '') $msgBody .= "
 
-■連絡希望の時間帯
-$reg_time
+■ご住所
+〒 $reg_zipcode
+";
+  if (isset($reg_address01) && $reg_address01 != '') $msgBody .= "
+$reg_address01
 ";
 
   if (isset($reg_content) && $reg_content != '') $msgBody .= "
 
-■お問い合わせ内容
+■お問い合せ内容
 $reg_content
 ";
 
@@ -276,11 +257,11 @@ window.onhashchange = function(event) {
       <div class="form">
         <h2 class="form__ttl">フォームからのお問い合わせ</h2>
         <div class="form__step step3"></div>
-        <div class="form__txtend">お問い合わせいただきありがとうございました</div>
-        <div class="form__txt">
+        <div class="form__txtend">お問い合わせいただき<br class="sp">ありがとうございました</div>
+        <div class="form__txt step3">
           送信が完了しました<br>確認後、折り返しご連絡させていただく場合がござますので、ご承知おきください。<br>2営業日以上経ってもご連絡がない場合は、システムトラブルの可能性がありますので、<br>お手数ですがお電話にてお問い合わせください。
         </div>
-        <p class="t20b0"><a href="<?php echo APP_URL; ?>">←TOPへ戻る</a></p>
+        <p class="btn-black"><a href="<?php echo APP_URL; ?>">トップへ戻る</a></p>
       </div>
     </div>
     <?php // include(APP_PATH.'libs/contactBox.php')
